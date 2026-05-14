@@ -1,0 +1,2107 @@
+{
+  "inMemoryTables": [
+    {
+      "entity": {
+        "MetadataId": "8d4650e4-4f39-f111-88b4-000d3a5ac4a5",
+        "OwnershipType": "UserOwned",
+        "PrimaryNameAttribute": "crd49_projectid",
+        "SchemaName": "crd49_ProjectMediaURL",
+        "HasNotes": false,
+        "HasActivities": false,
+        "IsAvailableOffline": false,
+        "IsActivity": false,
+        "ActivityTypeMask": 0,
+        "IsSolutionAware": false,
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "Label": "Stores media URLs associated with AIS projects",
+              "LanguageCode": 1033
+            }
+          ]
+        },
+        "DisplayCollectionName": {
+          "LocalizedLabels": [
+            {
+              "Label": "Project Media URLs",
+              "LanguageCode": 1033
+            }
+          ]
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "Label": "Project Media URL",
+              "LanguageCode": 1033
+            }
+          ]
+        },
+        "IsAuditEnabled": {
+          "Value": false
+        },
+        "IsValidForQueue": {
+          "Value": false
+        },
+        "IsConnectionsEnabled": {
+          "Value": false
+        },
+        "IsDuplicateDetectionEnabled": {
+          "Value": true
+        },
+        "IsDocumentManagementEnabled": false,
+        "EntityColor": null,
+        "IsRetentionEnabled": false,
+        "SyncToExternalSearchIndex": false,
+        "AutoRouteToOwnerQueue": false,
+        "IsSLAEnabled": false,
+        "IsQuickCreateEnabled": false,
+        "IsActivityParty": false,
+        "HasFeedback": false,
+        "AutoCreateAccessTeams": false,
+        "ChangeTrackingEnabled": false,
+        "IsKnowledgeManagementEnabled": false,
+        "EntityHelpUrlEnabled": false,
+        "EntityHelpUrl": null,
+        "IsMailMergeEnabled": {
+          "Value": true
+        },
+        "IsOfflineInMobileClient": {
+          "Value": false
+        },
+        "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+        "Attributes": [
+          {
+            "MetadataId": "e4513dd2-45e5-43cf-9061-87049abeaaa5",
+            "IsPrimaryName": true,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "SchemaName": "crd49_ProjectID",
+            "SourceType": 0,
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Project ID",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "ApplicationRequired"
+            },
+            "AttributeType": "String",
+            "AttributeTypeName": {
+              "Value": "StringType"
+            },
+            "ImeMode": "Auto",
+            "MaxLength": 850,
+            "FormatName": {
+              "Value": "Text"
+            },
+            "Format": "Text",
+            "AutoNumberFormat": null,
+            "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata"
+          },
+          {
+            "MetadataId": "0f8db573-86b8-4d6a-814d-929f1568f656",
+            "IsPrimaryName": false,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "SchemaName": "crd49_URLJSONData",
+            "SourceType": 0,
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "URL JSON Data",
+                  "LanguageCode": 1033
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "ApplicationRequired"
+            },
+            "AttributeType": "Memo",
+            "AttributeTypeName": {
+              "Value": "MemoType"
+            },
+            "ImeMode": "Auto",
+            "MaxLength": 2000,
+            "FormatName": {
+              "Value": "Text"
+            },
+            "Format": "Text",
+            "AutoNumberFormat": null,
+            "@odata.type": "Microsoft.Dynamics.CRM.MemoAttributeMetadata"
+          }
+        ],
+        "ManyToOneRelationships": [],
+        "OneToManyRelationships": [],
+        "ManyToManyRelationships": []
+      },
+      "data": [],
+      "dataPayloadFormat": "Dataverse",
+      "additionalMetadata": {
+        "position": {
+          "x": 0,
+          "y": 334
+        },
+        "existingEntityInfo": {
+          "LogicalName": "crd49_projectmediaurl",
+          "SchemaName": "crd49_ProjectMediaURL",
+          "MetadataId": "8d4650e4-4f39-f111-88b4-000d3a5ac4a5",
+          "Description": {
+            "LocalizedLabels": [
+              {
+                "Label": "Stores media URLs associated with AIS projects",
+                "LanguageCode": 1033
+              }
+            ]
+          },
+          "DisplayCollectionName": {
+            "LocalizedLabels": [
+              {
+                "Label": "Project Media URLs",
+                "LanguageCode": 1033
+              }
+            ]
+          },
+          "DisplayName": {
+            "LocalizedLabels": [
+              {
+                "Label": "Project Media URL",
+                "LanguageCode": 1033
+              }
+            ]
+          },
+          "OwnershipType": "UserOwned",
+          "PrimaryIdAttribute": "",
+          "PrimaryNameAttribute": "crd49_projectid",
+          "HasNotes": false,
+          "HasActivities": false,
+          "ExternalName": "",
+          "ExternalCollectionName": "",
+          "EntitySetName": ""
+        }
+      },
+      "tableSourceType": "ExistingTable",
+      "updatedByDataModelProvider": true,
+      "isExistingEntity": true
+    },
+    {
+      "entity": {
+        "SchemaName": "crd49_AISProjectManager",
+        "MetadataId": "2e5cd821-7638-f111-88b4-000d3a343a2e",
+        "Description": {
+          "LocalizedLabels": [
+            {
+              "Label": "Tracks engineering hardware and software projects with milestones and contributors",
+              "LanguageCode": 1033
+            }
+          ]
+        },
+        "DisplayCollectionName": {
+          "LocalizedLabels": [
+            {
+              "Label": "AIS Project Managers",
+              "LanguageCode": 1033
+            }
+          ]
+        },
+        "DisplayName": {
+          "LocalizedLabels": [
+            {
+              "Label": "AIS Project Manager",
+              "LanguageCode": 1033
+            }
+          ]
+        },
+        "OwnershipType": "UserOwned",
+        "PrimaryIdAttribute": "",
+        "PrimaryNameAttribute": "crd49_projectname",
+        "HasNotes": false,
+        "HasActivities": false,
+        "ExternalName": "",
+        "ExternalCollectionName": "",
+        "EntitySetName": "",
+        "@odata.type": "Microsoft.Dynamics.CRM.EntityMetadata",
+        "Attributes": [
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.UniqueIdentifierAttributeMetadata",
+            "AttributeType": "Uniqueidentifier",
+            "AttributeTypeName": {
+              "Value": "UniqueidentifierType"
+            },
+            "IsPrimaryName": false,
+            "IsPrimaryId": true,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "MetadataId": "21464609-4212-4a56-a626-b505d1efb24a",
+            "SchemaName": "crd49_AISProjectManagerId",
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Unique identifier for entity instances",
+                  "LanguageCode": 1033,
+                  "IsManaged": false,
+                  "MetadataId": "415cd821-7638-f111-88b4-000d3a343a2e",
+                  "HasChanged": null
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "AIS Project Manager",
+                  "LanguageCode": 1033,
+                  "IsManaged": false,
+                  "MetadataId": "425cd821-7638-f111-88b4-000d3a343a2e",
+                  "HasChanged": null
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "SystemRequired",
+              "CanBeChanged": false,
+              "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
+            }
+          },
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.MemoAttributeMetadata",
+            "AttributeType": "Memo",
+            "AttributeTypeName": {
+              "Value": "MemoType"
+            },
+            "IsPrimaryName": false,
+            "IsPrimaryId": false,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "MetadataId": "b13e6fa6-66b8-4339-9fe9-d3da104e5cb8",
+            "SchemaName": "crd49_ContributorNames",
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "",
+                  "LanguageCode": 1033,
+                  "IsManaged": false,
+                  "MetadataId": "9b11fbb8-d9de-4f64-aa74-55394dd851fb",
+                  "HasChanged": null
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Contributors JSON Data",
+                  "LanguageCode": 1033,
+                  "IsManaged": false,
+                  "MetadataId": "39b238ef-5890-4779-afb3-5b509be9a83f",
+                  "HasChanged": null
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "None",
+              "CanBeChanged": true,
+              "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
+            },
+            "ImeMode": "Auto",
+            "MaxLength": 2000,
+            "FormatName": {
+              "Value": "Text"
+            },
+            "Format": "Text",
+            "AutoNumberFormat": null
+          },
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.DateTimeAttributeMetadata",
+            "AttributeType": "DateTime",
+            "AttributeTypeName": {
+              "Value": "DateTimeType"
+            },
+            "IsPrimaryName": false,
+            "IsPrimaryId": false,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "MetadataId": "6044b493-492b-48be-aedd-a9eddaf2e3e2",
+            "SchemaName": "crd49_DueDate",
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "",
+                  "LanguageCode": 1033,
+                  "IsManaged": false,
+                  "MetadataId": "ea1de3d2-3edc-46e5-863e-2de2455bfd79",
+                  "HasChanged": null
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Due Date",
+                  "LanguageCode": 1033,
+                  "IsManaged": false,
+                  "MetadataId": "81f61e35-bbeb-412d-8c14-691af31075cc",
+                  "HasChanged": null
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "None",
+              "CanBeChanged": true,
+              "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
+            },
+            "ImeMode": "Auto",
+            "Format": "DateOnly",
+            "DateTimeBehavior": {
+              "Value": "UserLocal"
+            },
+            "CanChangeDateTimeBehavior": {
+              "Value": true,
+              "CanBeChanged": true,
+              "ManagedPropertyLogicalName": "canmodifybehavior"
+            }
+          },
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.IntegerAttributeMetadata",
+            "AttributeType": "Integer",
+            "AttributeTypeName": {
+              "Value": "IntegerType"
+            },
+            "IsPrimaryName": false,
+            "IsPrimaryId": false,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "MetadataId": "aafe01d5-9187-45f8-afa4-bbb349ff6f86",
+            "SchemaName": "crd49_EstimatedManHoursSaved",
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "",
+                  "LanguageCode": 1033,
+                  "IsManaged": false,
+                  "MetadataId": "b7c5b87c-62a2-4463-baa3-206b77f742af",
+                  "HasChanged": null
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Estimated Man-Hours Saved",
+                  "LanguageCode": 1033,
+                  "IsManaged": false,
+                  "MetadataId": "0ed4268c-4dce-4b6d-95d8-a93c6a26df10",
+                  "HasChanged": null
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "None",
+              "CanBeChanged": true,
+              "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
+            },
+            "MaxValue": 2147483647,
+            "MinValue": -2147483648,
+            "Format": "None"
+          },
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.MemoAttributeMetadata",
+            "AttributeType": "Memo",
+            "AttributeTypeName": {
+              "Value": "MemoType"
+            },
+            "IsPrimaryName": false,
+            "IsPrimaryId": false,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "MetadataId": "d729954b-1c8e-4c62-a67f-85b8eacb3227",
+            "SchemaName": "crd49_ExpectedBenefits",
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "",
+                  "LanguageCode": 1033,
+                  "IsManaged": false,
+                  "MetadataId": "d14b1a63-ad06-48bc-aa94-c8746118e251",
+                  "HasChanged": null
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Expected Benefits",
+                  "LanguageCode": 1033,
+                  "IsManaged": false,
+                  "MetadataId": "91f09566-5fad-4306-88d6-4f42100207f9",
+                  "HasChanged": null
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "None",
+              "CanBeChanged": true,
+              "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
+            },
+            "ImeMode": "Auto",
+            "MaxLength": 2000,
+            "FormatName": {
+              "Value": "Text"
+            },
+            "Format": "Text",
+            "AutoNumberFormat": null
+          },
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.MemoAttributeMetadata",
+            "AttributeType": "Memo",
+            "AttributeTypeName": {
+              "Value": "MemoType"
+            },
+            "IsPrimaryName": false,
+            "IsPrimaryId": false,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "MetadataId": "4ea96ffe-52aa-49e3-879c-2290c53ca79a",
+            "SchemaName": "crd49_MilestonesJSONData",
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "",
+                  "LanguageCode": 1033,
+                  "IsManaged": false,
+                  "MetadataId": "277e1ca7-0370-4795-937e-ec976db12016",
+                  "HasChanged": null
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Milestones JSON Data",
+                  "LanguageCode": 1033,
+                  "IsManaged": false,
+                  "MetadataId": "fee14916-b97d-4180-999b-2aaea002a0d1",
+                  "HasChanged": null
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "None",
+              "CanBeChanged": true,
+              "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
+            },
+            "ImeMode": "Auto",
+            "MaxLength": 2000,
+            "FormatName": {
+              "Value": "Text"
+            },
+            "Format": "Text",
+            "AutoNumberFormat": null
+          },
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.MemoAttributeMetadata",
+            "AttributeType": "Memo",
+            "AttributeTypeName": {
+              "Value": "MemoType"
+            },
+            "IsPrimaryName": false,
+            "IsPrimaryId": false,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "MetadataId": "0aa01dbc-5322-49bc-919b-c73729e5792d",
+            "SchemaName": "crd49_ProblemStatement",
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "",
+                  "LanguageCode": 1033,
+                  "IsManaged": false,
+                  "MetadataId": "a3533a21-bd23-4518-be56-1f30c26ea9d5",
+                  "HasChanged": null
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Problem Statement",
+                  "LanguageCode": 1033,
+                  "IsManaged": false,
+                  "MetadataId": "16e983eb-0091-4071-ab3e-a4105e3793a9",
+                  "HasChanged": null
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "None",
+              "CanBeChanged": true,
+              "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
+            },
+            "ImeMode": "Auto",
+            "MaxLength": 2000,
+            "FormatName": {
+              "Value": "Text"
+            },
+            "Format": "Text",
+            "AutoNumberFormat": null
+          },
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",
+            "AttributeType": "String",
+            "AttributeTypeName": {
+              "Value": "StringType"
+            },
+            "IsPrimaryName": true,
+            "IsPrimaryId": false,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "MetadataId": "2f5cd821-7638-f111-88b4-000d3a343a2e",
+            "SchemaName": "crd49_ProjectName",
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "",
+                  "LanguageCode": 1033,
+                  "IsManaged": false,
+                  "MetadataId": "27f89896-940a-4924-901b-7cf9c07bd30f",
+                  "HasChanged": null
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Project Name",
+                  "LanguageCode": 1033,
+                  "IsManaged": false,
+                  "MetadataId": "5b41c8c6-a4b1-4dd5-8778-ba2ebf867f6a",
+                  "HasChanged": null
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "ApplicationRequired",
+              "CanBeChanged": true,
+              "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
+            },
+            "ImeMode": "Auto",
+            "MaxLength": 850,
+            "FormatName": {
+              "Value": "Text"
+            },
+            "Format": "Text",
+            "AutoNumberFormat": null
+          },
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.PicklistAttributeMetadata",
+            "AttributeType": "Picklist",
+            "AttributeTypeName": {
+              "Value": "PicklistType"
+            },
+            "IsPrimaryName": false,
+            "IsPrimaryId": false,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "MetadataId": "f6f247ef-a96b-4369-815b-197ba2309f8e",
+            "SchemaName": "crd49_ProjectType",
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "",
+                  "LanguageCode": 1033,
+                  "IsManaged": false,
+                  "MetadataId": "bd6eb2c1-3efa-418c-a081-92e6d54d4fa5",
+                  "HasChanged": null
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Project Type",
+                  "LanguageCode": 1033,
+                  "IsManaged": false,
+                  "MetadataId": "e18a0e80-5097-4130-8a54-ec68d4c3926c",
+                  "HasChanged": null
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "ApplicationRequired",
+              "CanBeChanged": true,
+              "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
+            },
+            "DefaultFormValue": -1
+          },
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.MemoAttributeMetadata",
+            "AttributeType": "Memo",
+            "AttributeTypeName": {
+              "Value": "MemoType"
+            },
+            "IsPrimaryName": false,
+            "IsPrimaryId": false,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "MetadataId": "4b7576f7-63cc-45e7-aafc-8d91c84fb81f",
+            "SchemaName": "crd49_ProposedSolution",
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "",
+                  "LanguageCode": 1033,
+                  "IsManaged": false,
+                  "MetadataId": "bf4057bb-f859-4bb2-899b-abe734f48341",
+                  "HasChanged": null
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Proposed Solution",
+                  "LanguageCode": 1033,
+                  "IsManaged": false,
+                  "MetadataId": "f5e3c394-372f-431f-9328-5ab4fc22f67c",
+                  "HasChanged": null
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "None",
+              "CanBeChanged": true,
+              "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
+            },
+            "ImeMode": "Auto",
+            "MaxLength": 2000,
+            "FormatName": {
+              "Value": "Text"
+            },
+            "Format": "Text",
+            "AutoNumberFormat": null
+          },
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.DateTimeAttributeMetadata",
+            "AttributeType": "DateTime",
+            "AttributeTypeName": {
+              "Value": "DateTimeType"
+            },
+            "IsPrimaryName": false,
+            "IsPrimaryId": false,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "MetadataId": "148d1e5a-27ca-43db-9728-e7bdd580d887",
+            "SchemaName": "crd49_StartDate",
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "",
+                  "LanguageCode": 1033,
+                  "IsManaged": false,
+                  "MetadataId": "e7ef875f-99ea-4278-9c6d-0a18597b3e3d",
+                  "HasChanged": null
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Start Date",
+                  "LanguageCode": 1033,
+                  "IsManaged": false,
+                  "MetadataId": "0cbebf04-7c33-4650-9d69-70fb79d19bfb",
+                  "HasChanged": null
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "None",
+              "CanBeChanged": true,
+              "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
+            },
+            "ImeMode": "Auto",
+            "Format": "DateOnly",
+            "DateTimeBehavior": {
+              "Value": "UserLocal"
+            },
+            "CanChangeDateTimeBehavior": {
+              "Value": true,
+              "CanBeChanged": true,
+              "ManagedPropertyLogicalName": "canmodifybehavior"
+            }
+          },
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.PicklistAttributeMetadata",
+            "AttributeType": "Picklist",
+            "AttributeTypeName": {
+              "Value": "PicklistType"
+            },
+            "IsPrimaryName": false,
+            "IsPrimaryId": false,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "MetadataId": "2d725c99-26fd-4a0f-9e52-47795efa8e83",
+            "SchemaName": "crd49_Status",
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "",
+                  "LanguageCode": 1033,
+                  "IsManaged": false,
+                  "MetadataId": "cebc4b3b-ab75-4532-a828-e2d2dc01e0e9",
+                  "HasChanged": null
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Status",
+                  "LanguageCode": 1033,
+                  "IsManaged": false,
+                  "MetadataId": "1cb2b7ac-8967-4220-ba1d-ef8da73ebeb4",
+                  "HasChanged": null
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "ApplicationRequired",
+              "CanBeChanged": true,
+              "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
+            },
+            "DefaultFormValue": -1
+          },
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+            "AttributeType": "Lookup",
+            "AttributeTypeName": {
+              "Value": "LookupType"
+            },
+            "IsPrimaryName": false,
+            "IsPrimaryId": false,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "MetadataId": "66ffdfb0-f47b-4501-8329-b9b799c2fe99",
+            "SchemaName": "CreatedBy",
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Unique identifier of the user who created the record.",
+                  "LanguageCode": 1033,
+                  "IsManaged": false,
+                  "MetadataId": "455cd821-7638-f111-88b4-000d3a343a2e",
+                  "HasChanged": null
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Created By",
+                  "LanguageCode": 1033,
+                  "IsManaged": false,
+                  "MetadataId": "465cd821-7638-f111-88b4-000d3a343a2e",
+                  "HasChanged": null
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "None",
+              "CanBeChanged": true,
+              "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
+            },
+            "Targets": [
+              "systemuser"
+            ]
+          },
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.DateTimeAttributeMetadata",
+            "AttributeType": "DateTime",
+            "AttributeTypeName": {
+              "Value": "DateTimeType"
+            },
+            "IsPrimaryName": false,
+            "IsPrimaryId": false,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "MetadataId": "cf05db1b-000e-4ed6-bc7a-eb94ec86e29d",
+            "SchemaName": "CreatedOn",
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Date and time when the record was created.",
+                  "LanguageCode": 1033,
+                  "IsManaged": false,
+                  "MetadataId": "435cd821-7638-f111-88b4-000d3a343a2e",
+                  "HasChanged": null
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Created On",
+                  "LanguageCode": 1033,
+                  "IsManaged": false,
+                  "MetadataId": "445cd821-7638-f111-88b4-000d3a343a2e",
+                  "HasChanged": null
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "None",
+              "CanBeChanged": true,
+              "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
+            },
+            "ImeMode": "Inactive",
+            "Format": "DateAndTime",
+            "DateTimeBehavior": {
+              "Value": "UserLocal"
+            },
+            "CanChangeDateTimeBehavior": {
+              "Value": false,
+              "CanBeChanged": false,
+              "ManagedPropertyLogicalName": "canmodifybehavior"
+            }
+          },
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+            "AttributeType": "Lookup",
+            "AttributeTypeName": {
+              "Value": "LookupType"
+            },
+            "IsPrimaryName": false,
+            "IsPrimaryId": false,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "MetadataId": "2ec4e3dc-8eb0-458c-9228-e167f6f58611",
+            "SchemaName": "CreatedOnBehalfBy",
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Unique identifier of the delegate user who created the record.",
+                  "LanguageCode": 1033,
+                  "IsManaged": false,
+                  "MetadataId": "4b5cd821-7638-f111-88b4-000d3a343a2e",
+                  "HasChanged": null
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Created By (Delegate)",
+                  "LanguageCode": 1033,
+                  "IsManaged": false,
+                  "MetadataId": "4c5cd821-7638-f111-88b4-000d3a343a2e",
+                  "HasChanged": null
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "None",
+              "CanBeChanged": true,
+              "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
+            },
+            "Targets": [
+              "systemuser"
+            ]
+          },
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.IntegerAttributeMetadata",
+            "AttributeType": "Integer",
+            "AttributeTypeName": {
+              "Value": "IntegerType"
+            },
+            "IsPrimaryName": false,
+            "IsPrimaryId": false,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "MetadataId": "3dbaf0b8-cce8-4c7e-beb8-e27f474991ec",
+            "SchemaName": "ImportSequenceNumber",
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Sequence number of the import that created this record.",
+                  "LanguageCode": 1033,
+                  "IsManaged": false,
+                  "MetadataId": "a35cd821-7638-f111-88b4-000d3a343a2e",
+                  "HasChanged": null
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Import Sequence Number",
+                  "LanguageCode": 1033,
+                  "IsManaged": false,
+                  "MetadataId": "a45cd821-7638-f111-88b4-000d3a343a2e",
+                  "HasChanged": null
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "None",
+              "CanBeChanged": true,
+              "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
+            },
+            "MaxValue": 2147483647,
+            "MinValue": -2147483648,
+            "Format": "None"
+          },
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+            "AttributeType": "Lookup",
+            "AttributeTypeName": {
+              "Value": "LookupType"
+            },
+            "IsPrimaryName": false,
+            "IsPrimaryId": false,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "MetadataId": "4d6c321e-283b-4b10-bd79-3eac1a19ea3a",
+            "SchemaName": "ModifiedBy",
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Unique identifier of the user who modified the record.",
+                  "LanguageCode": 1033,
+                  "IsManaged": false,
+                  "MetadataId": "495cd821-7638-f111-88b4-000d3a343a2e",
+                  "HasChanged": null
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Modified By",
+                  "LanguageCode": 1033,
+                  "IsManaged": false,
+                  "MetadataId": "4a5cd821-7638-f111-88b4-000d3a343a2e",
+                  "HasChanged": null
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "None",
+              "CanBeChanged": true,
+              "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
+            },
+            "Targets": [
+              "systemuser"
+            ]
+          },
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.DateTimeAttributeMetadata",
+            "AttributeType": "DateTime",
+            "AttributeTypeName": {
+              "Value": "DateTimeType"
+            },
+            "IsPrimaryName": false,
+            "IsPrimaryId": false,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "MetadataId": "56b1b44c-10f3-4e08-b1fe-801606d25416",
+            "SchemaName": "ModifiedOn",
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Date and time when the record was modified.",
+                  "LanguageCode": 1033,
+                  "IsManaged": false,
+                  "MetadataId": "475cd821-7638-f111-88b4-000d3a343a2e",
+                  "HasChanged": null
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Modified On",
+                  "LanguageCode": 1033,
+                  "IsManaged": false,
+                  "MetadataId": "485cd821-7638-f111-88b4-000d3a343a2e",
+                  "HasChanged": null
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "None",
+              "CanBeChanged": true,
+              "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
+            },
+            "ImeMode": "Inactive",
+            "Format": "DateAndTime",
+            "DateTimeBehavior": {
+              "Value": "UserLocal"
+            },
+            "CanChangeDateTimeBehavior": {
+              "Value": false,
+              "CanBeChanged": false,
+              "ManagedPropertyLogicalName": "canmodifybehavior"
+            }
+          },
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+            "AttributeType": "Lookup",
+            "AttributeTypeName": {
+              "Value": "LookupType"
+            },
+            "IsPrimaryName": false,
+            "IsPrimaryId": false,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "MetadataId": "ed990a91-191e-49b7-b853-2b8ff98ca211",
+            "SchemaName": "ModifiedOnBehalfBy",
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Unique identifier of the delegate user who modified the record.",
+                  "LanguageCode": 1033,
+                  "IsManaged": false,
+                  "MetadataId": "4d5cd821-7638-f111-88b4-000d3a343a2e",
+                  "HasChanged": null
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Modified By (Delegate)",
+                  "LanguageCode": 1033,
+                  "IsManaged": false,
+                  "MetadataId": "4e5cd821-7638-f111-88b4-000d3a343a2e",
+                  "HasChanged": null
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "None",
+              "CanBeChanged": true,
+              "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
+            },
+            "Targets": [
+              "systemuser"
+            ]
+          },
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.DateTimeAttributeMetadata",
+            "AttributeType": "DateTime",
+            "AttributeTypeName": {
+              "Value": "DateTimeType"
+            },
+            "IsPrimaryName": false,
+            "IsPrimaryId": false,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "MetadataId": "35a88b33-6ee9-4376-8b2f-b1e3ed736557",
+            "SchemaName": "OverriddenCreatedOn",
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Date and time that the record was migrated.",
+                  "LanguageCode": 1033,
+                  "IsManaged": false,
+                  "MetadataId": "a55cd821-7638-f111-88b4-000d3a343a2e",
+                  "HasChanged": null
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Record Created On",
+                  "LanguageCode": 1033,
+                  "IsManaged": false,
+                  "MetadataId": "a65cd821-7638-f111-88b4-000d3a343a2e",
+                  "HasChanged": null
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "None",
+              "CanBeChanged": true,
+              "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
+            },
+            "ImeMode": "Inactive",
+            "Format": "DateOnly",
+            "DateTimeBehavior": {
+              "Value": "UserLocal"
+            },
+            "CanChangeDateTimeBehavior": {
+              "Value": false,
+              "CanBeChanged": false,
+              "ManagedPropertyLogicalName": "canmodifybehavior"
+            }
+          },
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.OwnerAttributeMetadata",
+            "AttributeType": "Owner",
+            "AttributeTypeName": {
+              "Value": "OwnerType"
+            },
+            "IsPrimaryName": false,
+            "IsPrimaryId": false,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "MetadataId": "41e4d3ee-83a6-4a30-9240-d0f1e938687c",
+            "SchemaName": "OwnerId",
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Owner Id",
+                  "LanguageCode": 1033,
+                  "IsManaged": false,
+                  "MetadataId": "6d5cd821-7638-f111-88b4-000d3a343a2e",
+                  "HasChanged": null
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Owner",
+                  "LanguageCode": 1033,
+                  "IsManaged": false,
+                  "MetadataId": "6e5cd821-7638-f111-88b4-000d3a343a2e",
+                  "HasChanged": null
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "SystemRequired",
+              "CanBeChanged": true,
+              "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
+            },
+            "Targets": [
+              "systemuser",
+              "team"
+            ]
+          },
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+            "AttributeType": "Lookup",
+            "AttributeTypeName": {
+              "Value": "LookupType"
+            },
+            "IsPrimaryName": false,
+            "IsPrimaryId": false,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "MetadataId": "6df11798-0af7-42d7-b920-a2ec762307f3",
+            "SchemaName": "OwningBusinessUnit",
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Unique identifier for the business unit that owns the record",
+                  "LanguageCode": 1033,
+                  "IsManaged": false,
+                  "MetadataId": "755cd821-7638-f111-88b4-000d3a343a2e",
+                  "HasChanged": null
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Owning Business Unit",
+                  "LanguageCode": 1033,
+                  "IsManaged": false,
+                  "MetadataId": "765cd821-7638-f111-88b4-000d3a343a2e",
+                  "HasChanged": null
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "None",
+              "CanBeChanged": true,
+              "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
+            },
+            "Targets": [
+              "businessunit"
+            ]
+          },
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+            "AttributeType": "Lookup",
+            "AttributeTypeName": {
+              "Value": "LookupType"
+            },
+            "IsPrimaryName": false,
+            "IsPrimaryId": false,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "MetadataId": "b38b41f6-4e1f-47fc-ad69-04dfc29f1d88",
+            "SchemaName": "OwningTeam",
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Unique identifier for the team that owns the record.",
+                  "LanguageCode": 1033,
+                  "IsManaged": false,
+                  "MetadataId": "7e5cd821-7638-f111-88b4-000d3a343a2e",
+                  "HasChanged": null
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Owning Team",
+                  "LanguageCode": 1033,
+                  "IsManaged": false,
+                  "MetadataId": "7f5cd821-7638-f111-88b4-000d3a343a2e",
+                  "HasChanged": null
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "None",
+              "CanBeChanged": true,
+              "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
+            },
+            "Targets": [
+              "team"
+            ]
+          },
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.LookupAttributeMetadata",
+            "AttributeType": "Lookup",
+            "AttributeTypeName": {
+              "Value": "LookupType"
+            },
+            "IsPrimaryName": false,
+            "IsPrimaryId": false,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "MetadataId": "032436a5-1923-4ef7-b9a8-e4e6df5ca531",
+            "SchemaName": "OwningUser",
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Unique identifier for the user that owns the record.",
+                  "LanguageCode": 1033,
+                  "IsManaged": false,
+                  "MetadataId": "775cd821-7638-f111-88b4-000d3a343a2e",
+                  "HasChanged": null
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Owning User",
+                  "LanguageCode": 1033,
+                  "IsManaged": false,
+                  "MetadataId": "785cd821-7638-f111-88b4-000d3a343a2e",
+                  "HasChanged": null
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "None",
+              "CanBeChanged": true,
+              "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
+            },
+            "Targets": [
+              "systemuser"
+            ]
+          },
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.StateAttributeMetadata",
+            "AttributeType": "State",
+            "AttributeTypeName": {
+              "Value": "StateType"
+            },
+            "IsPrimaryName": false,
+            "IsPrimaryId": false,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "MetadataId": "2f8aba71-cd9d-4961-acf3-598d847c1de5",
+            "SchemaName": "statecode",
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Status of the AIS Project Manager",
+                  "LanguageCode": 1033,
+                  "IsManaged": false,
+                  "MetadataId": "8e5cd821-7638-f111-88b4-000d3a343a2e",
+                  "HasChanged": null
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Status",
+                  "LanguageCode": 1033,
+                  "IsManaged": false,
+                  "MetadataId": "8f5cd821-7638-f111-88b4-000d3a343a2e",
+                  "HasChanged": null
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "SystemRequired",
+              "CanBeChanged": true,
+              "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
+            }
+          },
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.StatusAttributeMetadata",
+            "AttributeType": "Status",
+            "AttributeTypeName": {
+              "Value": "StatusType"
+            },
+            "IsPrimaryName": false,
+            "IsPrimaryId": false,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "MetadataId": "b4abe518-2379-4e6e-943b-384578d836c7",
+            "SchemaName": "statuscode",
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Reason for the status of the AIS Project Manager",
+                  "LanguageCode": 1033,
+                  "IsManaged": false,
+                  "MetadataId": "985cd821-7638-f111-88b4-000d3a343a2e",
+                  "HasChanged": null
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Status Reason",
+                  "LanguageCode": 1033,
+                  "IsManaged": false,
+                  "MetadataId": "995cd821-7638-f111-88b4-000d3a343a2e",
+                  "HasChanged": null
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "None",
+              "CanBeChanged": true,
+              "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
+            }
+          },
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.IntegerAttributeMetadata",
+            "AttributeType": "Integer",
+            "AttributeTypeName": {
+              "Value": "IntegerType"
+            },
+            "IsPrimaryName": false,
+            "IsPrimaryId": false,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "MetadataId": "7a973017-87e7-4ca4-bbe2-d8f6f658e146",
+            "SchemaName": "TimeZoneRuleVersionNumber",
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "For internal use only.",
+                  "LanguageCode": 1033,
+                  "IsManaged": false,
+                  "MetadataId": "a75cd821-7638-f111-88b4-000d3a343a2e",
+                  "HasChanged": null
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Time Zone Rule Version Number",
+                  "LanguageCode": 1033,
+                  "IsManaged": false,
+                  "MetadataId": "a85cd821-7638-f111-88b4-000d3a343a2e",
+                  "HasChanged": null
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "None",
+              "CanBeChanged": true,
+              "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
+            },
+            "MaxValue": 2147483647,
+            "MinValue": -1,
+            "Format": "None"
+          },
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.IntegerAttributeMetadata",
+            "AttributeType": "Integer",
+            "AttributeTypeName": {
+              "Value": "IntegerType"
+            },
+            "IsPrimaryName": false,
+            "IsPrimaryId": false,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "MetadataId": "9bc25337-0fea-41c7-aef7-4982d22aee60",
+            "SchemaName": "UTCConversionTimeZoneCode",
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Time zone code that was in use when the record was created.",
+                  "LanguageCode": 1033,
+                  "IsManaged": false,
+                  "MetadataId": "a95cd821-7638-f111-88b4-000d3a343a2e",
+                  "HasChanged": null
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "UTC Conversion Time Zone Code",
+                  "LanguageCode": 1033,
+                  "IsManaged": false,
+                  "MetadataId": "aa5cd821-7638-f111-88b4-000d3a343a2e",
+                  "HasChanged": null
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "None",
+              "CanBeChanged": true,
+              "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
+            },
+            "MaxValue": 2147483647,
+            "MinValue": -1,
+            "Format": "None"
+          },
+          {
+            "@odata.type": "Microsoft.Dynamics.CRM.BigIntAttributeMetadata",
+            "AttributeType": "BigInt",
+            "AttributeTypeName": {
+              "Value": "BigIntType"
+            },
+            "IsPrimaryName": false,
+            "IsPrimaryId": false,
+            "IsSecured": false,
+            "IsValidForUpdate": true,
+            "IsValidForRead": true,
+            "MetadataId": "aa0c15d0-3177-40ae-ba47-0c1d393ee3a9",
+            "SchemaName": "VersionNumber",
+            "ExternalName": null,
+            "Description": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Version Number",
+                  "LanguageCode": 1033,
+                  "IsManaged": false,
+                  "MetadataId": "a15cd821-7638-f111-88b4-000d3a343a2e",
+                  "HasChanged": null
+                }
+              ]
+            },
+            "DisplayName": {
+              "LocalizedLabels": [
+                {
+                  "Label": "Version Number",
+                  "LanguageCode": 1033,
+                  "IsManaged": false,
+                  "MetadataId": "a25cd821-7638-f111-88b4-000d3a343a2e",
+                  "HasChanged": null
+                }
+              ]
+            },
+            "RequiredLevel": {
+              "Value": "None",
+              "CanBeChanged": true,
+              "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
+            },
+            "MaxValue": 9223372036854776000,
+            "MinValue": -9223372036854776000
+          }
+        ],
+        "ManyToOneRelationships": [
+          {
+            "MetadataId": "4f5cd821-7638-f111-88b4-000d3a343a2e",
+            "HasChanged": null,
+            "IsCustomRelationship": false,
+            "IsValidForAdvancedFind": true,
+            "SchemaName": "lk_crd49_aisprojectmanager_createdby",
+            "SecurityTypes": "None",
+            "IsManaged": false,
+            "RelationshipType": "OneToManyRelationship",
+            "IntroducedVersion": "1.0",
+            "ReferencedAttribute": "systemuserid",
+            "ReferencedEntity": "systemuser",
+            "ReferencingAttribute": "createdby",
+            "ReferencingEntity": "crd49_aisprojectmanager",
+            "IsHierarchical": false,
+            "EntityKey": null,
+            "IsRelationshipAttributeDenormalized": false,
+            "ReferencedEntityNavigationPropertyName": "lk_crd49_aisprojectmanager_createdby",
+            "ReferencingEntityNavigationPropertyName": "CreatedBy",
+            "RelationshipBehavior": 0,
+            "IsDenormalizedLookup": null,
+            "DenormalizedAttributeName": null,
+            "IsCustomizable": {
+              "Value": true,
+              "CanBeChanged": true,
+              "ManagedPropertyLogicalName": "iscustomizable"
+            },
+            "AssociatedMenuConfiguration": {
+              "Behavior": "DoNotDisplay",
+              "Group": "Details",
+              "Order": null,
+              "IsCustomizable": false,
+              "Icon": null,
+              "ViewId": "00000000-0000-0000-0000-000000000000",
+              "AvailableOffline": true,
+              "MenuId": null,
+              "QueryApi": null,
+              "Label": {
+                "LocalizedLabels": [],
+                "UserLocalizedLabel": null
+              }
+            },
+            "CascadeConfiguration": {
+              "Assign": "NoCascade",
+              "Delete": "NoCascade",
+              "Archive": "NoCascade",
+              "Merge": "NoCascade",
+              "Reparent": "NoCascade",
+              "Share": "NoCascade",
+              "Unshare": "NoCascade",
+              "RollupView": "NoCascade"
+            },
+            "RelationshipAttributes": [],
+            "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata"
+          },
+          {
+            "MetadataId": "565cd821-7638-f111-88b4-000d3a343a2e",
+            "HasChanged": null,
+            "IsCustomRelationship": false,
+            "IsValidForAdvancedFind": true,
+            "SchemaName": "lk_crd49_aisprojectmanager_createdonbehalfby",
+            "SecurityTypes": "None",
+            "IsManaged": false,
+            "RelationshipType": "OneToManyRelationship",
+            "IntroducedVersion": "1.0",
+            "ReferencedAttribute": "systemuserid",
+            "ReferencedEntity": "systemuser",
+            "ReferencingAttribute": "createdonbehalfby",
+            "ReferencingEntity": "crd49_aisprojectmanager",
+            "IsHierarchical": false,
+            "EntityKey": null,
+            "IsRelationshipAttributeDenormalized": false,
+            "ReferencedEntityNavigationPropertyName": "lk_crd49_aisprojectmanager_createdonbehalfby",
+            "ReferencingEntityNavigationPropertyName": "CreatedOnBehalfBy",
+            "RelationshipBehavior": 0,
+            "IsDenormalizedLookup": null,
+            "DenormalizedAttributeName": null,
+            "IsCustomizable": {
+              "Value": true,
+              "CanBeChanged": true,
+              "ManagedPropertyLogicalName": "iscustomizable"
+            },
+            "AssociatedMenuConfiguration": {
+              "Behavior": "DoNotDisplay",
+              "Group": "Details",
+              "Order": null,
+              "IsCustomizable": false,
+              "Icon": null,
+              "ViewId": "00000000-0000-0000-0000-000000000000",
+              "AvailableOffline": true,
+              "MenuId": null,
+              "QueryApi": null,
+              "Label": {
+                "LocalizedLabels": [],
+                "UserLocalizedLabel": null
+              }
+            },
+            "CascadeConfiguration": {
+              "Assign": "NoCascade",
+              "Delete": "NoCascade",
+              "Archive": "NoCascade",
+              "Merge": "NoCascade",
+              "Reparent": "NoCascade",
+              "Share": "NoCascade",
+              "Unshare": "NoCascade",
+              "RollupView": "NoCascade"
+            },
+            "RelationshipAttributes": [],
+            "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata"
+          },
+          {
+            "MetadataId": "5e5cd821-7638-f111-88b4-000d3a343a2e",
+            "HasChanged": null,
+            "IsCustomRelationship": false,
+            "IsValidForAdvancedFind": true,
+            "SchemaName": "lk_crd49_aisprojectmanager_modifiedby",
+            "SecurityTypes": "None",
+            "IsManaged": false,
+            "RelationshipType": "OneToManyRelationship",
+            "IntroducedVersion": "1.0",
+            "ReferencedAttribute": "systemuserid",
+            "ReferencedEntity": "systemuser",
+            "ReferencingAttribute": "modifiedby",
+            "ReferencingEntity": "crd49_aisprojectmanager",
+            "IsHierarchical": false,
+            "EntityKey": null,
+            "IsRelationshipAttributeDenormalized": false,
+            "ReferencedEntityNavigationPropertyName": "lk_crd49_aisprojectmanager_modifiedby",
+            "ReferencingEntityNavigationPropertyName": "ModifiedBy",
+            "RelationshipBehavior": 0,
+            "IsDenormalizedLookup": null,
+            "DenormalizedAttributeName": null,
+            "IsCustomizable": {
+              "Value": true,
+              "CanBeChanged": true,
+              "ManagedPropertyLogicalName": "iscustomizable"
+            },
+            "AssociatedMenuConfiguration": {
+              "Behavior": "DoNotDisplay",
+              "Group": "Details",
+              "Order": null,
+              "IsCustomizable": false,
+              "Icon": null,
+              "ViewId": "00000000-0000-0000-0000-000000000000",
+              "AvailableOffline": true,
+              "MenuId": null,
+              "QueryApi": null,
+              "Label": {
+                "LocalizedLabels": [],
+                "UserLocalizedLabel": null
+              }
+            },
+            "CascadeConfiguration": {
+              "Assign": "NoCascade",
+              "Delete": "NoCascade",
+              "Archive": "NoCascade",
+              "Merge": "NoCascade",
+              "Reparent": "NoCascade",
+              "Share": "NoCascade",
+              "Unshare": "NoCascade",
+              "RollupView": "NoCascade"
+            },
+            "RelationshipAttributes": [],
+            "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata"
+          },
+          {
+            "MetadataId": "665cd821-7638-f111-88b4-000d3a343a2e",
+            "HasChanged": null,
+            "IsCustomRelationship": false,
+            "IsValidForAdvancedFind": true,
+            "SchemaName": "lk_crd49_aisprojectmanager_modifiedonbehalfby",
+            "SecurityTypes": "None",
+            "IsManaged": false,
+            "RelationshipType": "OneToManyRelationship",
+            "IntroducedVersion": "1.0",
+            "ReferencedAttribute": "systemuserid",
+            "ReferencedEntity": "systemuser",
+            "ReferencingAttribute": "modifiedonbehalfby",
+            "ReferencingEntity": "crd49_aisprojectmanager",
+            "IsHierarchical": false,
+            "EntityKey": null,
+            "IsRelationshipAttributeDenormalized": false,
+            "ReferencedEntityNavigationPropertyName": "lk_crd49_aisprojectmanager_modifiedonbehalfby",
+            "ReferencingEntityNavigationPropertyName": "ModifiedOnBehalfBy",
+            "RelationshipBehavior": 0,
+            "IsDenormalizedLookup": null,
+            "DenormalizedAttributeName": null,
+            "IsCustomizable": {
+              "Value": true,
+              "CanBeChanged": true,
+              "ManagedPropertyLogicalName": "iscustomizable"
+            },
+            "AssociatedMenuConfiguration": {
+              "Behavior": "DoNotDisplay",
+              "Group": "Details",
+              "Order": null,
+              "IsCustomizable": false,
+              "Icon": null,
+              "ViewId": "00000000-0000-0000-0000-000000000000",
+              "AvailableOffline": true,
+              "MenuId": null,
+              "QueryApi": null,
+              "Label": {
+                "LocalizedLabels": [],
+                "UserLocalizedLabel": null
+              }
+            },
+            "CascadeConfiguration": {
+              "Assign": "NoCascade",
+              "Delete": "NoCascade",
+              "Archive": "NoCascade",
+              "Merge": "NoCascade",
+              "Reparent": "NoCascade",
+              "Share": "NoCascade",
+              "Unshare": "NoCascade",
+              "RollupView": "NoCascade"
+            },
+            "RelationshipAttributes": [],
+            "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata"
+          },
+          {
+            "MetadataId": "795cd821-7638-f111-88b4-000d3a343a2e",
+            "HasChanged": null,
+            "IsCustomRelationship": false,
+            "IsValidForAdvancedFind": true,
+            "SchemaName": "user_crd49_aisprojectmanager",
+            "SecurityTypes": "None",
+            "IsManaged": false,
+            "RelationshipType": "OneToManyRelationship",
+            "IntroducedVersion": "1.0",
+            "ReferencedAttribute": "systemuserid",
+            "ReferencedEntity": "systemuser",
+            "ReferencingAttribute": "owninguser",
+            "ReferencingEntity": "crd49_aisprojectmanager",
+            "IsHierarchical": false,
+            "EntityKey": null,
+            "IsRelationshipAttributeDenormalized": false,
+            "ReferencedEntityNavigationPropertyName": "user_crd49_aisprojectmanager",
+            "ReferencingEntityNavigationPropertyName": "OwningUser",
+            "RelationshipBehavior": 0,
+            "IsDenormalizedLookup": null,
+            "DenormalizedAttributeName": null,
+            "IsCustomizable": {
+              "Value": true,
+              "CanBeChanged": true,
+              "ManagedPropertyLogicalName": "iscustomizable"
+            },
+            "AssociatedMenuConfiguration": {
+              "Behavior": "DoNotDisplay",
+              "Group": "Details",
+              "Order": null,
+              "IsCustomizable": false,
+              "Icon": null,
+              "ViewId": "00000000-0000-0000-0000-000000000000",
+              "AvailableOffline": true,
+              "MenuId": null,
+              "QueryApi": null,
+              "Label": {
+                "LocalizedLabels": [],
+                "UserLocalizedLabel": null
+              }
+            },
+            "CascadeConfiguration": {
+              "Assign": "NoCascade",
+              "Delete": "NoCascade",
+              "Archive": "NoCascade",
+              "Merge": "NoCascade",
+              "Reparent": "NoCascade",
+              "Share": "NoCascade",
+              "Unshare": "NoCascade",
+              "RollupView": "NoCascade"
+            },
+            "RelationshipAttributes": [],
+            "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata"
+          },
+          {
+            "MetadataId": "805cd821-7638-f111-88b4-000d3a343a2e",
+            "HasChanged": null,
+            "IsCustomRelationship": false,
+            "IsValidForAdvancedFind": true,
+            "SchemaName": "team_crd49_aisprojectmanager",
+            "SecurityTypes": "None",
+            "IsManaged": false,
+            "RelationshipType": "OneToManyRelationship",
+            "IntroducedVersion": "1.0",
+            "ReferencedAttribute": "teamid",
+            "ReferencedEntity": "team",
+            "ReferencingAttribute": "owningteam",
+            "ReferencingEntity": "crd49_aisprojectmanager",
+            "IsHierarchical": false,
+            "EntityKey": null,
+            "IsRelationshipAttributeDenormalized": false,
+            "ReferencedEntityNavigationPropertyName": "team_crd49_aisprojectmanager",
+            "ReferencingEntityNavigationPropertyName": "OwningTeam",
+            "RelationshipBehavior": 0,
+            "IsDenormalizedLookup": null,
+            "DenormalizedAttributeName": null,
+            "IsCustomizable": {
+              "Value": true,
+              "CanBeChanged": true,
+              "ManagedPropertyLogicalName": "iscustomizable"
+            },
+            "AssociatedMenuConfiguration": {
+              "Behavior": "DoNotDisplay",
+              "Group": "Details",
+              "Order": null,
+              "IsCustomizable": false,
+              "Icon": null,
+              "ViewId": "00000000-0000-0000-0000-000000000000",
+              "AvailableOffline": true,
+              "MenuId": null,
+              "QueryApi": null,
+              "Label": {
+                "LocalizedLabels": [],
+                "UserLocalizedLabel": null
+              }
+            },
+            "CascadeConfiguration": {
+              "Assign": "NoCascade",
+              "Delete": "NoCascade",
+              "Archive": "NoCascade",
+              "Merge": "NoCascade",
+              "Reparent": "NoCascade",
+              "Share": "NoCascade",
+              "Unshare": "NoCascade",
+              "RollupView": "NoCascade"
+            },
+            "RelationshipAttributes": [],
+            "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata"
+          },
+          {
+            "MetadataId": "855cd821-7638-f111-88b4-000d3a343a2e",
+            "HasChanged": null,
+            "IsCustomRelationship": false,
+            "IsValidForAdvancedFind": true,
+            "SchemaName": "owner_crd49_aisprojectmanager",
+            "SecurityTypes": "None",
+            "IsManaged": false,
+            "RelationshipType": "OneToManyRelationship",
+            "IntroducedVersion": "1.0",
+            "ReferencedAttribute": "ownerid",
+            "ReferencedEntity": "owner",
+            "ReferencingAttribute": "ownerid",
+            "ReferencingEntity": "crd49_aisprojectmanager",
+            "IsHierarchical": false,
+            "EntityKey": null,
+            "IsRelationshipAttributeDenormalized": false,
+            "ReferencedEntityNavigationPropertyName": "owner_crd49_aisprojectmanager",
+            "ReferencingEntityNavigationPropertyName": "OwnerId",
+            "RelationshipBehavior": 0,
+            "IsDenormalizedLookup": null,
+            "DenormalizedAttributeName": null,
+            "IsCustomizable": {
+              "Value": true,
+              "CanBeChanged": true,
+              "ManagedPropertyLogicalName": "iscustomizable"
+            },
+            "AssociatedMenuConfiguration": {
+              "Behavior": "DoNotDisplay",
+              "Group": "Details",
+              "Order": null,
+              "IsCustomizable": false,
+              "Icon": null,
+              "ViewId": "00000000-0000-0000-0000-000000000000",
+              "AvailableOffline": true,
+              "MenuId": null,
+              "QueryApi": null,
+              "Label": {
+                "LocalizedLabels": [],
+                "UserLocalizedLabel": null
+              }
+            },
+            "CascadeConfiguration": {
+              "Assign": "NoCascade",
+              "Delete": "NoCascade",
+              "Archive": "NoCascade",
+              "Merge": "NoCascade",
+              "Reparent": "NoCascade",
+              "Share": "NoCascade",
+              "Unshare": "NoCascade",
+              "RollupView": "NoCascade"
+            },
+            "RelationshipAttributes": [],
+            "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata"
+          },
+          {
+            "MetadataId": "895cd821-7638-f111-88b4-000d3a343a2e",
+            "HasChanged": null,
+            "IsCustomRelationship": false,
+            "IsValidForAdvancedFind": false,
+            "SchemaName": "business_unit_crd49_aisprojectmanager",
+            "SecurityTypes": "None",
+            "IsManaged": false,
+            "RelationshipType": "OneToManyRelationship",
+            "IntroducedVersion": "1.0",
+            "ReferencedAttribute": "businessunitid",
+            "ReferencedEntity": "businessunit",
+            "ReferencingAttribute": "owningbusinessunit",
+            "ReferencingEntity": "crd49_aisprojectmanager",
+            "IsHierarchical": false,
+            "EntityKey": null,
+            "IsRelationshipAttributeDenormalized": false,
+            "ReferencedEntityNavigationPropertyName": "business_unit_crd49_aisprojectmanager",
+            "ReferencingEntityNavigationPropertyName": "OwningBusinessUnit",
+            "RelationshipBehavior": 0,
+            "IsDenormalizedLookup": null,
+            "DenormalizedAttributeName": null,
+            "IsCustomizable": {
+              "Value": true,
+              "CanBeChanged": true,
+              "ManagedPropertyLogicalName": "iscustomizable"
+            },
+            "AssociatedMenuConfiguration": {
+              "Behavior": "DoNotDisplay",
+              "Group": "Details",
+              "Order": null,
+              "IsCustomizable": false,
+              "Icon": null,
+              "ViewId": "00000000-0000-0000-0000-000000000000",
+              "AvailableOffline": true,
+              "MenuId": null,
+              "QueryApi": null,
+              "Label": {
+                "LocalizedLabels": [],
+                "UserLocalizedLabel": null
+              }
+            },
+            "CascadeConfiguration": {
+              "Assign": "NoCascade",
+              "Delete": "Restrict",
+              "Archive": "Restrict",
+              "Merge": "NoCascade",
+              "Reparent": "NoCascade",
+              "Share": "NoCascade",
+              "Unshare": "NoCascade",
+              "RollupView": "NoCascade"
+            },
+            "RelationshipAttributes": [],
+            "@odata.type": "Microsoft.Dynamics.CRM.OneToManyRelationshipMetadata"
+          }
+        ],
+        "OneToManyRelationships": [],
+        "ManyToManyRelationships": []
+      },
+      "data": [],
+      "dataPayloadFormat": "Dataverse",
+      "additionalMetadata": {
+        "existingEntityInfo": {
+          "LogicalName": "crd49_aisprojectmanager",
+          "SchemaName": "crd49_AISProjectManager",
+          "MetadataId": "2e5cd821-7638-f111-88b4-000d3a343a2e",
+          "Description": {
+            "LocalizedLabels": [
+              {
+                "Label": "Tracks engineering hardware and software projects with milestones and contributors",
+                "LanguageCode": 1033
+              }
+            ],
+            "UserLocalizedLabel": {
+              "Label": "Tracks engineering hardware and software projects with milestones and contributors",
+              "LanguageCode": 1033
+            }
+          },
+          "DisplayCollectionName": {
+            "LocalizedLabels": [
+              {
+                "Label": "AIS Project Managers",
+                "LanguageCode": 1033
+              }
+            ],
+            "UserLocalizedLabel": {
+              "Label": "AIS Project Managers",
+              "LanguageCode": 1033
+            }
+          },
+          "DisplayName": {
+            "LocalizedLabels": [
+              {
+                "Label": "AIS Project Manager",
+                "LanguageCode": 1033
+              }
+            ],
+            "UserLocalizedLabel": {
+              "Label": "AIS Project Manager",
+              "LanguageCode": 1033
+            }
+          },
+          "OwnershipType": "UserOwned",
+          "PrimaryIdAttribute": "",
+          "PrimaryNameAttribute": "crd49_projectname",
+          "HasNotes": false,
+          "HasActivities": false,
+          "ExternalName": "",
+          "ExternalCollectionName": "",
+          "EntitySetName": ""
+        },
+        "isLoading": false,
+        "position": {
+          "x": 0,
+          "y": 30
+        },
+        "recordCountChanged": 0
+      },
+      "isExistingEntity": true,
+      "tableSourceType": "ExistingTable"
+    }
+  ]
+}
