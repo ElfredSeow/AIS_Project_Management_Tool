@@ -1,0 +1,134 @@
+{
+  "plans": [
+    {
+      "id": "P001",
+      "title": "Power App architecture overview",
+      "file": ".powercodex/plans/plan-1.html",
+      "jsonFile": ".powercodex/plans/plan-1.json",
+      "provider": "claude-code",
+      "sections": 7,
+      "mockups": 2,
+      "tasks": 1,
+      "visuals": "mockup",
+      "status": "ready",
+      "outcome": null,
+      "createdAt": "2026-06-08T10:09:41.358Z"
+    },
+    {
+      "id": "P002",
+      "title": "Visual walkthrough of your app",
+      "file": ".powercodex/plans/plan-2.html",
+      "jsonFile": ".powercodex/plans/plan-2.json",
+      "provider": "claude-code",
+      "sections": 7,
+      "mockups": 2,
+      "tasks": 1,
+      "visuals": "mockup",
+      "status": "ready",
+      "outcome": {
+        "built": [
+          {
+            "name": "Visual walkthrough of your app",
+            "file": null,
+            "created": false,
+            "wired": false,
+            "source": null
+          }
+        ],
+        "verified": null,
+        "ran": false,
+        "coverage": null,
+        "errors": [],
+        "finishedAt": "2026-06-08T10:11:32.974Z"
+      },
+      "createdAt": "2026-06-08T10:11:14.023Z"
+    },
+    {
+      "id": "P003",
+      "title": "App Landing Page",
+      "file": ".powercodex/plans/plan-3.html",
+      "jsonFile": ".powercodex/plans/plan-3.json",
+      "provider": "claude-code",
+      "sections": 7,
+      "mockups": 2,
+      "tasks": 1,
+      "visuals": "mockup",
+      "status": "ready",
+      "outcome": {
+        "built": [
+          {
+            "name": "App Landing Page",
+            "file": null,
+            "created": false,
+            "wired": false,
+            "source": null
+          }
+        ],
+        "verified": null,
+        "ran": false,
+        "coverage": null,
+        "errors": [],
+        "finishedAt": "2026-06-08T16:49:31.530Z"
+      },
+      "createdAt": "2026-06-08T16:48:43.136Z"
+    },
+    {
+      "id": "P004",
+      "title": "no need to do e2e check for this",
+      "file": ".powercodex/plans/plan-4.html",
+      "jsonFile": ".powercodex/plans/plan-4.json",
+      "provider": "claude-code",
+      "sections": 7,
+      "mockups": 2,
+      "tasks": 1,
+      "visuals": "mockup",
+      "status": "ready",
+      "outcome": {
+        "built": [
+          {
+            "name": "no need to do e2e check for this",
+            "file": null,
+            "created": false,
+            "wired": false,
+            "source": null
+          }
+        ],
+        "verified": null,
+        "ran": false,
+        "coverage": null,
+        "errors": [],
+        "finishedAt": "2026-06-08T16:53:34.726Z"
+      },
+      "createdAt": "2026-06-08T16:53:24.275Z"
+    },
+    {
+      "id": "P005",
+      "title": "App Landing Page",
+      "file": ".powercodex/plans/plan-5.html",
+      "jsonFile": ".powercodex/plans/plan-5.json",
+      "provider": "claude-code",
+      "sections": 7,
+      "mockups": 2,
+      "tasks": 1,
+      "visuals": "mockup",
+      "status": "ready",
+      "outcome": {
+        "built": [
+          {
+            "name": "App Landing Page",
+            "file": null,
+            "created": false,
+            "wired": false,
+            "source": null
+          }
+        ],
+        "verified": null,
+        "ran": false,
+        "coverage": null,
+        "errors": [],
+        "finishedAt": "2026-06-08T16:54:09.276Z"
+      },
+      "createdAt": "2026-06-08T16:53:49.449Z"
+    }
+  ]
+}

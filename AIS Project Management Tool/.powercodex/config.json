@@ -1,0 +1,11 @@
+{
+  "name": "AIS Project Management Tool",
+  "mode": "local-run",
+  "runner": null,
+  "providers": [
+    "claude-code",
+    "github-copilot"
+  ],
+  "defaultProvider": "claude-code",
+  "importedAt": "2026-06-08T13:12:23.552Z"
+}

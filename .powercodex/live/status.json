@@ -1,0 +1,12 @@
+{"ts":"2026-06-08T16:53:58.942Z","rotation":0,"stage":0,"agent":"intake","level":"info","message":"Playwright not installed · live-app smoke test will use the build gate (run `npm i -D playwright` for browser checks)"}
+{"ts":"2026-06-08T16:53:59.806Z","rotation":0,"stage":0,"agent":"intake","level":"info","message":"Nothing real to drive here (not a code app, no browser) · using simulation"}
+{"ts":"2026-06-08T16:54:00.669Z","rotation":0,"stage":0,"agent":"intake","level":"info","message":"Project start · dashboard opened, intake gate active"}
+{"ts":"2026-06-08T16:54:01.527Z","rotation":0,"stage":0,"agent":"intake","level":"warn","message":"Goal + MVP present · compliance 0% · DRIFT — clarify before build","data":{"goal":"continue","mvp":"• Hero section with app name and tagline\n• Short intro explaining what the app does\n• Feature highlights in a simple grid\n• Screenshot showcase of the app\n• Call-to-action button to get started\n• Lightweight footer with basic links","compliance":0,"mode":"simulate (no real target)"}}
+{"ts":"2026-06-08T16:54:02.384Z","rotation":0,"stage":3,"agent":"build-executor","level":"good","message":"Reusing verified MDM profile \"mdm-edge\" · no re-login"}
+{"ts":"2026-06-08T16:54:03.247Z","rotation":1,"stage":1,"agent":"planner","level":"info","message":"Authoring HTML spec artifact (Now→After, recommendation, questions)"}
+{"ts":"2026-06-08T16:54:04.114Z","rotation":1,"stage":1,"agent":"planner","level":"good","message":"Artifact ready · \"I am completely ready, I have no more questions to ask.\""}
+{"ts":"2026-06-08T16:54:04.975Z","rotation":1,"stage":2,"agent":"planner","level":"good","message":"Change approved · proceeding to build"}
+{"ts":"2026-06-08T16:54:05.834Z","rotation":1,"stage":3,"agent":"build-executor","level":"info","message":"Executing code.screen · App Landing Page"}
+{"ts":"2026-06-08T16:54:06.699Z","rotation":1,"stage":3,"agent":"build-executor","level":"good","message":"App Landing Page created (simulated) · verified-in-portal=true"}
+{"ts":"2026-06-08T16:54:07.561Z","rotation":1,"stage":4,"agent":"runner","level":"warn","message":"Publishing is off (Approved_rights allowPush=false) → built on-device only; flip Publish to go live"}
+{"ts":"2026-06-08T16:54:08.419Z","rotation":1,"stage":7,"agent":"loop","level":"warn","message":"Loop stopped (guardrail / escalation to you)"}

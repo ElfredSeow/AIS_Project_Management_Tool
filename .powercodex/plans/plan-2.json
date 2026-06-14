@@ -1,0 +1,66 @@
+{
+  "id": "P002",
+  "title": "Visual walkthrough of your app",
+  "goal": "Can you give me a screenshot of how the app looks like right now",
+  "provider": "claude-code",
+  "createdAt": "2026-06-08T10:11:14.021Z",
+  "items": [
+    "A friendly preview of each screen in your app",
+    "Notes on what each screen is for",
+    "A simple map showing how screens connect",
+    "An overview of where your data comes from",
+    "Shareable layout so you can show teammates"
+  ],
+  "capabilities": {
+    "filterByUser": false,
+    "sort": false,
+    "highlight": false,
+    "search": false,
+    "rowAction": false
+  },
+  "screen": {
+    "componentName": "VisualWalkthroughOfYourScreen",
+    "route": "/visual-walkthrough-of-your",
+    "kebab": "visual-walkthrough-of-your"
+  },
+  "tasks": [
+    {
+      "type": "code.screen",
+      "name": "visual-walkthrough-of-your",
+      "route": "/visual-walkthrough-of-your",
+      "displayName": "Visual walkthrough of your app"
+    }
+  ],
+  "now": {
+    "exists": false,
+    "route": "/visual-walkthrough-of-your"
+  },
+  "visuals": "mockup",
+  "shots": {
+    "now": null,
+    "after": null
+  },
+  "history": [
+    {
+      "id": "P001",
+      "title": "Power App architecture overview",
+      "verified": null
+    }
+  ],
+  "outcome": {
+    "built": [
+      {
+        "name": "Visual walkthrough of your app",
+        "file": null,
+        "created": false,
+        "wired": false,
+        "source": null
+      }
+    ],
+    "verified": null,
+    "ran": false,
+    "coverage": null,
+    "errors": [],
+    "finishedAt": "2026-06-08T10:11:32.974Z"
+  }
+}

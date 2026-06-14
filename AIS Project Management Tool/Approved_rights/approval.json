@@ -1,0 +1,12 @@
+{
+  "browserProfile": "",
+  "browserProfileLabel": "",
+  "profilePath": "",
+  "appUrl": "",
+  "allowBuild": true,
+  "allowPush": false,
+  "allowAutoRespec": false,
+  "allowAutoApplyDefects": true,
+  "grantedBy": "user",
+  "grantedAt": "2026-06-08"
+}

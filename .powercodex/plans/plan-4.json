@@ -1,0 +1,73 @@
+{
+  "id": "P004",
+  "title": "no need to do e2e check for this",
+  "goal": "no need to do e2e check for this",
+  "provider": "claude-code",
+  "createdAt": "2026-06-08T16:53:24.272Z",
+  "items": [
+    "Build the main screen for what you described",
+    "Test it end-to-end and fix issues until it is clean"
+  ],
+  "capabilities": {
+    "filterByUser": false,
+    "sort": false,
+    "highlight": false,
+    "search": false,
+    "rowAction": false
+  },
+  "screen": {
+    "componentName": "NoNeedToDoScreen",
+    "route": "/no-need-to-do",
+    "kebab": "no-need-to-do"
+  },
+  "tasks": [
+    {
+      "type": "code.screen",
+      "name": "no-need-to-do",
+      "route": "/no-need-to-do",
+      "displayName": "no need to do e2e check for this"
+    }
+  ],
+  "now": {
+    "exists": false,
+    "route": "/no-need-to-do"
+  },
+  "visuals": "mockup",
+  "shots": {
+    "now": null,
+    "after": null
+  },
+  "history": [
+    {
+      "id": "P001",
+      "title": "Power App architecture overview",
+      "verified": null
+    },
+    {
+      "id": "P002",
+      "title": "Visual walkthrough of your app",
+      "verified": null
+    },
+    {
+      "id": "P003",
+      "title": "App Landing Page",
+      "verified": null
+    }
+  ],
+  "outcome": {
+    "built": [
+      {
+        "name": "no need to do e2e check for this",
+        "file": null,
+        "created": false,
+        "wired": false,
+        "source": null
+      }
+    ],
+    "verified": null,
+    "ran": false,
+    "coverage": null,
+    "errors": [],
+    "finishedAt": "2026-06-08T16:53:34.726Z"
+  }
+}

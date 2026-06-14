@@ -1,0 +1,20 @@
+{
+  "artifacts": [
+    {
+      "id": "A001",
+      "kind": "document",
+      "title": "Create me a landing page of this app",
+      "file": ".powercodex/artifacts/A001-document.html",
+      "provider": "powercodex",
+      "createdAt": "2026-06-08T14:26:13.003Z"
+    },
+    {
+      "id": "A002",
+      "kind": "document",
+      "title": "Create me a HTML of this entire repo and create a landing page with screenshots of the app for me",
+      "file": ".powercodex/artifacts/A002-document.html",
+      "provider": "powercodex",
+      "createdAt": "2026-06-08T14:27:02.970Z"
+    }
+  ]
+}

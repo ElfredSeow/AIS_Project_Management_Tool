@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Power App architecture overview · plan P001</title>
+<style>
+  :root{--bg:#0b0d12;--soft:#12151d;--panel:#161a24;--panel2:#1c2130;--line:#262c3a;--line2:#313a4d;
+    --text:#e8ecf4;--muted:#99a2b8;--faint:#6b7488;--accent:#6ea8fe;--accent2:#a78bfa;--good:#5ad19a;--bad:#f08a8a;--warn:#f5c97b;}
+  *{box-sizing:border-box}
+  body{margin:0;background:radial-gradient(900px 460px at 80% -12%,rgba(167,139,250,.16),transparent 60%),var(--bg);
+    color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,sans-serif;line-height:1.6}
+  .wrap{max-width:860px;margin:0 auto;padding:30px 22px 80px}
+  code{font-family:"SF Mono",ui-monospace,Menlo,Consolas,monospace;font-size:.86em;background:var(--panel2);border:1px solid var(--line);border-radius:5px;padding:1px 6px;color:#cdd6ea}
+  .eb{display:inline-flex;align-items:center;gap:7px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);background:rgba(110,168,254,.1);border:1px solid rgba(110,168,254,.25);padding:5px 12px;border-radius:999px}
+  h1{font-size:30px;line-height:1.1;margin:14px 0 8px;letter-spacing:-.02em}
+  .lead{color:var(--muted);font-size:15px;max-width:680px;margin:0}
+  .meta{margin-top:16px;display:flex;gap:8px;flex-wrap:wrap;color:var(--faint);font-size:12px}
+  .meta span{border:1px solid var(--line);border-radius:999px;padding:4px 11px}
+  h2{font-size:18px;margin:38px 0 4px;letter-spacing:-.01em}
+  .kick{color:var(--accent2);font-weight:700;font-size:11px;letter-spacing:.14em;text-transform:uppercase;margin:34px 0 0}
+  .panel{background:linear-gradient(180deg,var(--panel),var(--soft));border:1px solid var(--line);border-radius:14px;padding:18px;margin-top:12px}
+  table{width:100%;border-collapse:collapse;font-size:13.5px;margin-top:10px}
+  th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top;color:var(--muted)}
+  th{color:var(--faint);font-size:11px;text-transform:uppercase;letter-spacing:.06em}
+  td b{color:var(--text)}
+  ul.clean{list-style:none;padding:0;margin:10px 0 0}
+  ul.clean li{position:relative;padding-left:22px;margin:7px 0;color:var(--muted);font-size:13.5px}
+  ul.clean li::before{content:"→";position:absolute;left:0;color:var(--accent)}
+  .pill{display:inline-block;font-size:11px;padding:2px 9px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}
+  .pill.good{color:var(--good);border-color:rgba(90,209,154,.35);background:rgba(90,209,154,.08)}
+  .pill.bad{color:var(--bad);border-color:rgba(240,138,138,.35);background:rgba(240,138,138,.08)}
+  .pill.warn{color:var(--warn);border-color:rgba(245,201,123,.35);background:rgba(245,201,123,.08)}
+  .pill.acc{color:var(--accent);border-color:rgba(110,168,254,.35);background:rgba(110,168,254,.08)}
+  .pill.pur{color:var(--accent2);border-color:rgba(167,139,250,.35);background:rgba(167,139,250,.08)}
+  .callout{border-left:3px solid var(--accent);background:rgba(110,168,254,.06);padding:12px 14px;border-radius:0 9px 9px 0;color:var(--muted);font-size:13.5px;margin-top:12px}
+  .dim{color:var(--faint)}
+  .ba{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:12px}
+  @media(max-width:680px){.ba{grid-template-columns:1fr}}
+  .col .cap{display:flex;align-items:center;gap:8px;font-size:11.5px;color:var(--faint);margin-bottom:8px}
+  .badge{font-size:10px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:#0b0d12;border-radius:5px;padding:2px 8px}
+  .badge.now{background:var(--warn)}.badge.after{background:var(--good)}
+  .mk-screen{border:1px solid var(--line2);border-radius:11px;background:var(--panel);padding:14px;min-height:210px}
+  .mk-shot{width:100%;border:1px solid var(--line2);border-radius:11px;display:block}
+  .mk-eb{font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);border:1px solid rgba(110,168,254,.3);border-radius:999px;padding:2px 9px;display:inline-block}
+  .mk-eb.dim{color:var(--faint);border-color:var(--line)}
+  .mk-h{font-size:16px;font-weight:800;margin:8px 0 3px}.mk-h.dim{color:var(--faint)}
+  .mk-sub{color:var(--faint);font-size:11px;margin-bottom:8px}
+  .mk-search{font-size:11px;color:var(--faint);border:1px solid var(--line);border-radius:7px;padding:6px 9px;background:var(--panel2)}
+  .mk-tbl{width:100%;border-collapse:collapse;font-size:11px;margin-top:2px}
+  .mk-tbl th{font-size:8.5px;color:var(--faint);text-transform:uppercase;padding:4px 6px;border-bottom:1px solid var(--line)}
+  .mk-tbl td{padding:5px 6px;border-bottom:1px solid var(--line);color:var(--muted)}
+  .mk-tbl td.red{color:var(--bad);font-weight:600}
+  .mk-tbl.wide{font-size:12.5px}.mk-tbl.wide td,.mk-tbl.wide th{padding:8px 10px}
+  .mk-btn{font-size:9px;border:1px solid var(--line2);border-radius:5px;padding:2px 7px;color:var(--accent)}
+  .mk-note{font-size:9.5px;color:var(--accent2);margin-top:7px}
+  .mk-empty{margin-top:14px;border:1px dashed var(--line2);border-radius:9px;padding:18px;text-align:center;color:var(--faint);font-size:11px}
+  .mk-lbl{font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--accent2);font-weight:700}
+  .foot{margin-top:54px;border-top:1px solid var(--line);padding-top:18px;color:var(--faint);font-size:12px;text-align:center}
+</style></head>
+<body><div class="wrap">
+
+  <span class="eb">● Proposed change · P001</span>
+  <h1>Power App architecture overview</h1>
+  <p class="lead">The existing project folder you are reading is an existing powerapps Here’s what I’ll build, test, and self-heal until it’s clean.</p>
+  <div class="meta">
+    <span>Author: claude-code</span>
+    <span>Screen: <code>PowerAppArchitectureOverviewScreen</code></span>
+    <span>Route: <code>/power-app-architecture-overview</code></span>
+    <span>Visuals: mockup</span>
+  </div>
+
+  <p class="kick">Summary &amp; remarks</p>
+  <h2>What you asked for</h2>
+  <div class="panel"><ul class="clean"><li>A clear map of the main screens and how people move between them</li><li>A simple view of where your data lives and what connects to it</li><li>A summary of the key actions and automations running behind the scenes</li><li>A list of users or roles and what each one can do</li><li>A one-page visual you can share with teammates or stakeholders</li></ul></div>
+
+  <p class="kick">Capability breakdown</p>
+  <h2>How each piece shows up on screen</h2>
+  <div class="panel"><table><tr><th>Capability</th><th>What it does</th></tr><tr><td><b>Main screen</b></td><td>A clean list view of your records to start from.</td></tr></table></div>
+
+  <p class="kick">Now vs After</p>
+  <h2>Before this change, and after</h2>
+  <div class="ba">
+    <div class="col"><div class="cap"><span class="badge now">Now</span> current app</div><div class="mk-screen"><div class="mk-eb dim">● Today</div><div class="mk-h dim">Nothing here yet</div><div class="mk-sub">There is no screen at <code>/power-app-architecture-overview</code> yet — this plan creates it.</div><div class="mk-empty">＋ blank — no screen yet</div></div></div>
+    <div class="col"><div class="cap"><span class="badge after">After</span> proposed</div><div class="mk-screen"><div class="mk-eb">● Proposed screen</div><div class="mk-h">Power App architecture overview</div><div class="mk-sub">The existing project folder you are reading is an existing powerapps</div><table class="mk-tbl"><tr><th>Title</th><th>Owner</th><th>Due</th><th>Status</th></tr><tr><td>First item</td><td>you</td><td>06-01</td><td>Open</td></tr><tr><td>Second item</td><td>alex</td><td>06-10</td><td>Open</td></tr><tr><td>Third item</td><td>you</td><td>05-20</td><td>Done</td></tr><tr><td>Fourth item</td><td>you</td><td>07-02</td><td>Open</td></tr></table></div></div>
+  </div>
+
+  <p class="kick">Build · test · self-heal</p>
+  <h2>How it gets made</h2>
+  <div class="panel"><ul class="clean">
+    <li><b>Author the screen</b> in real React + TypeScript against sample data.</li>
+    <li><b>Wire it into your app’s routes</b> at <code>/power-app-architecture-overview</code>.</li>
+    <li><b>Verify by compiling</b> your whole app — a real pass/fail gate, no tenant needed.</li>
+    <li><b>Self-heal</b> — if it doesn’t compile, revert to a known-good version and re-check.</li>
+  </ul></div>
+
+  <p class="kick">Task list</p>
+  <h2>The concrete files</h2>
+  <div class="panel"><table><tr><th>Kind</th><th>What</th><th>Where</th></tr><tr><td><span class="pill acc">code.screen</span></td><td><b>Power App architecture overview</b></td><td><code>src/pages/power-app-architecture-overview.tsx</code></td></tr></table></div>
+
+  <p class="kick">Outcome log</p>
+  <h2>What actually happened</h2>
+  <div class="panel"><div class="callout">The build hasn’t run yet. Once it does, this section fills in with what was actually created, whether it compiled, and any issues found — so the next plan can learn from it.</div></div>
+
+  <div class="foot">PowerCodex · P001 · generated 2026-06-08 10:09:41</div>
+</div></body></html>

@@ -1,0 +1,111 @@
+{
+  "name": "AIS Project Management Tool",
+  "mode": "local-run",
+  "runner": null,
+  "generatedAt": "2026-06-08T13:12:23.677Z",
+  "coverage": {
+    "filesScanned": 83,
+    "filesSkipped": 0,
+    "truncated": false,
+    "partial": false
+  },
+  "routes": [
+    {
+      "path": "/",
+      "source": "apps/tracker/src/app.tsx"
+    },
+    {
+      "path": "*",
+      "source": "apps/tracker/src/app.tsx"
+    }
+  ],
+  "components": [
+    {
+      "name": "DashboardPage",
+      "source": "apps/tracker/src/pages/index.tsx"
+    },
+    {
+      "name": "NotFoundPage",
+      "source": "apps/tracker/src/pages/not-found.tsx"
+    },
+    {
+      "name": "Layout",
+      "source": "apps/tracker/src/pages/_layout.tsx"
+    },
+    {
+      "name": "AISProjectManagerSchema",
+      "source": "apps/tracker/src/generated/validators/aisproject-manager-validator.ts"
+    },
+    {
+      "name": "CreateAISProjectManagerSchema",
+      "source": "apps/tracker/src/generated/validators/aisproject-manager-validator.ts"
+    },
+    {
+      "name": "UpdateAISProjectManagerSchema",
+      "source": "apps/tracker/src/generated/validators/aisproject-manager-validator.ts"
+    },
+    {
+      "name": "ProjectMediaURLSchema",
+      "source": "apps/tracker/src/generated/validators/project-media-url-validator.ts"
+    },
+    {
+      "name": "CreateProjectMediaURLSchema",
+      "source": "apps/tracker/src/generated/validators/project-media-url-validator.ts"
+    },
+    {
+      "name": "UpdateProjectMediaURLSchema",
+      "source": "apps/tracker/src/generated/validators/project-media-url-validator.ts"
+    },
+    {
+      "name": "AISProjectManagerProjecttypeKeyToLabel",
+      "source": "apps/tracker/src/generated/models/aisproject-manager-model.ts"
+    },
+    {
+      "name": "AISProjectManagerStatusKeyToLabel",
+      "source": "apps/tracker/src/generated/models/aisproject-manager-model.ts"
+    },
+    {
+      "name": "CreateProjectDialog",
+      "source": "apps/tracker/src/components/create-project-dialog.tsx"
+    },
+    {
+      "name": "ExportProjectsDialog",
+      "source": "apps/tracker/src/components/export-projects-dialog.tsx"
+    },
+    {
+      "name": "KanbanCard",
+      "source": "apps/tracker/src/components/kanban-card.tsx"
+    },
+    {
+      "name": "ProjectDetailModal",
+      "source": "apps/tracker/src/components/project-detail-modal.tsx"
+    }
+  ],
+  "data": [
+    {
+      "symbol": "Dataverse",
+      "source": "apps/tracker/src/pages/index.tsx"
+    },
+    {
+      "symbol": "useQuery",
+      "source": "apps/tracker/src/generated/hooks/use-aisproject-manager.ts"
+    },
+    {
+      "symbol": "useMutation",
+      "source": "apps/tracker/src/generated/hooks/use-aisproject-manager.ts"
+    },
+    {
+      "symbol": "useQuery",
+      "source": "apps/tracker/src/generated/hooks/use-project-media-url.ts"
+    },
+    {
+      "symbol": "useMutation",
+      "source": "apps/tracker/src/generated/hooks/use-project-media-url.ts"
+    },
+    {
+      "symbol": "connector",
+      "source": "apps/tracker/src/components/project-detail-modal.tsx"
+    }
+  ],
+  "scripts": []
+}

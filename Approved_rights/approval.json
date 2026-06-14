@@ -1,0 +1,12 @@
+{
+  "browserProfile": "mdm-edge",
+  "browserProfileLabel": "",
+  "profilePath": "./.profiles/mdm-edge",
+  "appUrl": "",
+  "allowBuild": true,
+  "allowPush": false,
+  "allowAutoRespec": false,
+  "allowAutoApplyDefects": true,
+  "grantedBy": "user",
+  "grantedAt": "2026-06-08"
+}

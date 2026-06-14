@@ -1,0 +1,45 @@
+{
+  "id": "P001",
+  "title": "Power App architecture overview",
+  "goal": "The existing project folder you are reading is an existing powerapps",
+  "provider": "claude-code",
+  "createdAt": "2026-06-08T10:09:41.355Z",
+  "items": [
+    "A clear map of the main screens and how people move between them",
+    "A simple view of where your data lives and what connects to it",
+    "A summary of the key actions and automations running behind the scenes",
+    "A list of users or roles and what each one can do",
+    "A one-page visual you can share with teammates or stakeholders"
+  ],
+  "capabilities": {
+    "filterByUser": false,
+    "sort": false,
+    "highlight": false,
+    "search": false,
+    "rowAction": false
+  },
+  "screen": {
+    "componentName": "PowerAppArchitectureOverviewScreen",
+    "route": "/power-app-architecture-overview",
+    "kebab": "power-app-architecture-overview"
+  },
+  "tasks": [
+    {
+      "type": "code.screen",
+      "name": "power-app-architecture-overview",
+      "route": "/power-app-architecture-overview",
+      "displayName": "Power App architecture overview"
+    }
+  ],
+  "now": {
+    "exists": false,
+    "route": "/power-app-architecture-overview"
+  },
+  "visuals": "mockup",
+  "shots": {
+    "now": null,
+    "after": null
+  },
+  "history": [],
+  "outcome": null
+}

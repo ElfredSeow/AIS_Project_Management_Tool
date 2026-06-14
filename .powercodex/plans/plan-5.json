@@ -1,0 +1,82 @@
+{
+  "id": "P005",
+  "title": "App Landing Page",
+  "goal": "continue",
+  "provider": "claude-code",
+  "createdAt": "2026-06-08T16:53:49.447Z",
+  "items": [
+    "Hero section with app name and tagline",
+    "Short intro explaining what the app does",
+    "Feature highlights in a simple grid",
+    "Screenshot showcase of the app",
+    "Call-to-action button to get started",
+    "Lightweight footer with basic links"
+  ],
+  "capabilities": {
+    "filterByUser": false,
+    "sort": false,
+    "highlight": false,
+    "search": false,
+    "rowAction": true
+  },
+  "screen": {
+    "componentName": "AppLandingPage",
+    "route": "/app-landing",
+    "kebab": "app-landing"
+  },
+  "tasks": [
+    {
+      "type": "code.screen",
+      "name": "app-landing",
+      "route": "/app-landing",
+      "displayName": "App Landing Page"
+    }
+  ],
+  "now": {
+    "exists": false,
+    "route": "/app-landing"
+  },
+  "visuals": "mockup",
+  "shots": {
+    "now": null,
+    "after": null
+  },
+  "history": [
+    {
+      "id": "P001",
+      "title": "Power App architecture overview",
+      "verified": null
+    },
+    {
+      "id": "P002",
+      "title": "Visual walkthrough of your app",
+      "verified": null
+    },
+    {
+      "id": "P003",
+      "title": "App Landing Page",
+      "verified": null
+    },
+    {
+      "id": "P004",
+      "title": "no need to do e2e check for this",
+      "verified": null
+    }
+  ],
+  "outcome": {
+    "built": [
+      {
+        "name": "App Landing Page",
+        "file": null,
+        "created": false,
+        "wired": false,
+        "source": null
+      }
+    ],
+    "verified": null,
+    "ran": false,
+    "coverage": null,
+    "errors": [],
+    "finishedAt": "2026-06-08T16:54:09.276Z"
+  }
+}
