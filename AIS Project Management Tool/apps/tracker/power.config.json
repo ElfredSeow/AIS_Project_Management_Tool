@@ -1,1 +1,64 @@
-{"appDisplayName":"Precision Engineering Tracker_202604150841","description":"Project tracking system for hardware and software engineering initiatives","buildPath":"./dist","buildEntryPoint":"index.html","logoPath":"Default","localAppUrl":"http://localhost:5173/","appId":"5880662a-ea4b-49ed-829c-bf18ec0f8683","tags":{"planId":"","projectId":"ccb57dca-d9f4-47ba-b138-be17fd7784e9"},"connectionReferences":{},"databaseReferences":{"default.cds":{"databaseDetails":{"environmentName":"default.cds","referenceType":"Environmental","linkedEnvironmentMetadata":{"resourceId":"ee0cb717-7138-f111-83fc-000d3a346301","friendlyName":"VibeProjManagement","uniqueName":"unqee0cb7177138f11183fc000d3a346","domainName":"orgf099b059","version":"9.2.26041.179","instanceUrl":"https://orgf099b059.crm.dynamics.com/","instanceApiUrl":"https://orgf099b059.api.crm.dynamics.com","baseLanguage":1033,"instanceState":"Ready","createdTime":"2026-04-15T02:25:26.547Z","platformSku":"Standard"}},"dataSources":{"crd49_aisprojectmanager":{"entitySetName":"crd49_aisprojectmanagers","logicalName":"crd49_aisprojectmanager","isHidden":false},"crd49_projectmediaurl":{"entitySetName":"crd49_projectmediaurls","logicalName":"crd49_projectmediaurl","isHidden":false}}}}}
+{
+  "version": "1.0",
+  "appId": "a97b39a6-d375-490d-a596-2e939d56ab69",
+  "appDisplayName": "Project Management Tool",
+  "region": "prod",
+  "description": "AIS Precision Engineering Project Management Tool",
+  "buildPath": "./dist",
+  "buildEntryPoint": "index.html",
+  "localAppUrl": "http://localhost:5173/",
+  "logoPath": "Default",
+  "connectionReferences": {
+    "5f22bc1c-a897-450d-9211-1a29f4f21c31": {
+      "id": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+      "displayName": "Microsoft Dataverse",
+      "dataSources": [
+        "commondataserviceforapps"
+      ],
+      "authenticationType": "Oauth",
+      "dataSets": {}
+    }
+  },
+  "databaseReferences": {
+    "default.cds": {
+      "databaseDetails": {
+        "environmentName": "default.cds",
+        "referenceType": "Environmental",
+        "linkedEnvironmentMetadata": {
+          "resourceId": "b8af5865-0c47-f011-be53-000d3aa3dd95",
+          "friendlyName": "Power Platform IT Portal",
+          "uniqueName": "unqb8af58650c47f011be53000d3aa3d",
+          "domainName": "orgdf838125",
+          "version": "9.2.26041.179",
+          "instanceUrl": "https://orgdf838125.crm5.dynamics.com/",
+          "instanceApiUrl": "https://orgdf838125.api.crm5.dynamics.com",
+          "baseLanguage": 1033,
+          "instanceState": "Ready",
+          "createdTime": "2026-04-15T02:25:26.547Z",
+          "platformSku": "Standard"
+        }
+      },
+      "dataSources": {
+        "crd49_aisprojectmanagers": {
+          "entitySetName": "crd49_aisprojectmanagers",
+          "logicalName": "crd49_aisprojectmanager",
+          "isHidden": false
+        },
+        "crd49_projectmediaurls": {
+          "entitySetName": "crd49_projectmediaurls",
+          "logicalName": "crd49_projectmediaurl",
+          "isHidden": false
+        },
+        "aisprojectmanagers": {
+          "entitySetName": "crd49_aisprojectmanagers",
+          "logicalName": "crd49_aisprojectmanager"
+        },
+        "projectmediaurls": {
+          "entitySetName": "crd49_projectmediaurls",
+          "logicalName": "crd49_projectmediaurl"
+        }
+      }
+    }
+  },
+  "environmentId": "785df0e1-c4a3-ed7b-a1cc-6d79caa80785"
+}

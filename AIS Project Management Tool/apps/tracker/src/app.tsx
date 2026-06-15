@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { QueryClientProvider } from '@tanstack/react-query';
 import { Provider as JotaiProvider } from 'jotai';
-import { initialize } from '@microsoft/power-apps/app';
+import { setConfig } from '@microsoft/power-apps/app';
 
 import Layout from '@/pages/_layout';
 import { queryClient } from '@/lib/query-client';
@@ -14,7 +14,7 @@ import NotFoundPage from '@/pages/not-found';
 
 function App() {
   useEffect(() => {
-    initialize();
+    setConfig({});
   }, []);
   return (
     <QueryClientProvider client={queryClient}>
