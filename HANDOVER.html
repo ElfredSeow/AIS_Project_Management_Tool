@@ -1,0 +1,1350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Handover Document — AIS Project Management Tool</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+      line-height: 1.7;
+    }
+
+    /* ── Header ── */
+    .hero {
+      background: linear-gradient(135deg, #1e1b4b 0%, #1a1a2e 50%, #0f172a 100%);
+      border-bottom: 1px solid #334155;
+      padding: 3rem 2rem 2.5rem;
+      text-align: center;
+    }
+    .hero .badge {
+      display: inline-block;
+      background: #7c3aed20;
+      color: #a78bfa;
+      border: 1px solid #7c3aed40;
+      border-radius: 9999px;
+      padding: 0.25rem 1rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #a78bfa, #60a5fa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.5rem;
+    }
+    .hero .subtitle {
+      color: #94a3b8;
+      font-size: 1.05rem;
+    }
+    .meta-row {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .meta-item {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.85rem;
+      color: #64748b;
+    }
+    .meta-item strong { color: #94a3b8; }
+
+    /* ── Layout ── */
+    .container { max-width: 1000px; margin: 0 auto; padding: 2rem; }
+
+    /* ── TOC ── */
+    .toc {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 12px;
+      padding: 1.5rem 2rem;
+      margin-bottom: 2.5rem;
+    }
+    .toc h2 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; color: #64748b; margin-bottom: 1rem; }
+    .toc ol { padding-left: 1.25rem; }
+    .toc li { margin-bottom: 0.35rem; }
+    .toc a { color: #818cf8; text-decoration: none; font-size: 0.9rem; }
+    .toc a:hover { color: #a5b4fc; text-decoration: underline; }
+
+    /* ── Sections ── */
+    section { margin-bottom: 3rem; scroll-margin-top: 1rem; }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid #334155;
+    }
+    .section-icon {
+      width: 36px; height: 36px;
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .icon-purple { background: #7c3aed25; }
+    .icon-blue   { background: #2563eb25; }
+    .icon-teal   { background: #0d948825; }
+    .icon-amber  { background: #d9770625; }
+
+    .section-header h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #f1f5f9;
+    }
+    .section-header .section-num {
+      font-size: 0.75rem;
+      color: #64748b;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+    }
+
+    /* ── Cards ── */
+    .card {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .card-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #f1f5f9;
+      margin-bottom: 0.5rem;
+    }
+    .card p { color: #94a3b8; font-size: 0.9rem; }
+
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    @media (max-width: 640px) { .grid-2 { grid-template-columns: 1fr; } }
+
+    .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; }
+    @media (max-width: 768px) { .grid-3 { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 500px) { .grid-3 { grid-template-columns: 1fr; } }
+
+    /* ── Prose ── */
+    p { color: #94a3b8; margin-bottom: 0.85rem; }
+    h3 { color: #e2e8f0; font-size: 1.05rem; font-weight: 600; margin: 1.25rem 0 0.5rem; }
+
+    /* ── Status pills ── */
+    .pill {
+      display: inline-flex; align-items: center; gap: 0.35rem;
+      padding: 0.2rem 0.65rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    .pill-violet { background: #7c3aed25; color: #a78bfa; border: 1px solid #7c3aed40; }
+    .pill-amber  { background: #d9770625; color: #fbbf24; border: 1px solid #d9770640; }
+    .pill-emerald{ background: #05966925; color: #34d399; border: 1px solid #05966940; }
+    .pill-slate  { background: #47556925; color: #94a3b8; border: 1px solid #47556940; }
+    .pill-sky    { background: #075c7925; color: #38bdf8; border: 1px solid #075c7940; }
+
+    /* ── Tables ── */
+    table { width: 100%; border-collapse: collapse; font-size: 0.875rem; margin-bottom: 1rem; }
+    th {
+      background: #0f172a;
+      color: #64748b;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 0.7rem;
+      letter-spacing: 0.06em;
+      padding: 0.6rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid #334155;
+    }
+    td {
+      padding: 0.65rem 1rem;
+      color: #94a3b8;
+      border-bottom: 1px solid #1e293b;
+    }
+    tr:last-child td { border-bottom: none; }
+    tr:hover td { background: #1e293b40; }
+
+    /* ── Code ── */
+    code {
+      background: #0f172a;
+      color: #a78bfa;
+      border: 1px solid #334155;
+      border-radius: 4px;
+      padding: 0.15rem 0.4rem;
+      font-size: 0.82rem;
+      font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+    }
+    pre {
+      background: #0f172a;
+      border: 1px solid #334155;
+      border-radius: 10px;
+      padding: 1.25rem 1.5rem;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+    }
+    pre code {
+      background: none;
+      border: none;
+      padding: 0;
+      color: #7dd3fc;
+      font-size: 0.85rem;
+    }
+
+    /* ── Flow diagram ── */
+    .flow {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      flex-wrap: wrap;
+      margin: 1rem 0;
+    }
+    .flow-step {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 8px;
+      padding: 0.5rem 1rem;
+      font-size: 0.8rem;
+      color: #e2e8f0;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    .flow-arrow {
+      color: #475569;
+      font-size: 1.1rem;
+      padding: 0 0.3rem;
+    }
+
+    /* ── Command table ── */
+    .cmd-table { width: 100%; border-collapse: collapse; margin-bottom: 1rem; }
+    .cmd-table th {
+      background: #0f172a;
+      color: #64748b;
+      font-size: 0.7rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.5rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid #334155;
+    }
+    .cmd-table td { padding: 0.6rem 1rem; border-bottom: 1px solid #1e293b40; vertical-align: top; }
+    .cmd-table td:first-child { font-family: monospace; color: #7dd3fc; font-size: 0.82rem; white-space: nowrap; }
+    .cmd-table td:last-child { color: #94a3b8; font-size: 0.875rem; }
+
+    /* ── Callout ── */
+    .callout {
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+      margin: 1rem 0;
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+      font-size: 0.875rem;
+    }
+    .callout-info  { background: #1e40af15; border: 1px solid #3b82f630; color: #93c5fd; }
+    .callout-warn  { background: #92400e15; border: 1px solid #f59e0b30; color: #fcd34d; }
+    .callout-tip   { background: #06520025; border: 1px solid #22c55e30; color: #86efac; }
+    .callout-icon  { font-size: 1rem; flex-shrink: 0; margin-top: 0.1rem; }
+
+    /* ── Stack chips ── */
+    .chips { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.5rem; }
+    .chip {
+      background: #0f172a;
+      border: 1px solid #334155;
+      border-radius: 9999px;
+      padding: 0.2rem 0.65rem;
+      font-size: 0.75rem;
+      color: #cbd5e1;
+    }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid #1e293b;
+      text-align: center;
+      padding: 2rem;
+      color: #475569;
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── HERO ── -->
+<header class="hero">
+  <div class="badge">Handover Document</div>
+  <h1>AIS Project Management Tool</h1>
+  <p class="subtitle">Technical handover covering product overview and PowerCodex build guide</p>
+  <div class="meta-row">
+    <span class="meta-item"><strong>Date:</strong> 22 June 2026</span>
+    <span class="meta-item"><strong>Author:</strong> Manfred Siew</span>
+    <span class="meta-item"><strong>Version:</strong> 1.0</span>
+    <span class="meta-item"><strong>Platform:</strong> Power Apps Code Apps</span>
+  </div>
+</header>
+
+<div class="container">
+
+  <!-- ── TOC ── -->
+  <nav class="toc">
+    <h2>Table of Contents</h2>
+    <ol>
+      <li><a href="#product">Product Overview — AIS Project Tracker</a></li>
+      <li><a href="#features">Key Features &amp; User Scenarios</a></li>
+      <li><a href="#data">Data Model</a></li>
+      <li><a href="#stack">Tech Stack</a></li>
+      <li><a href="#powercodex">What is PowerCodex?</a></li>
+      <li><a href="#workflow">PowerCodex OPSX Workflow</a></li>
+      <li><a href="#build-guide">How PowerCodex Was Used to Build This App</a></li>
+      <li><a href="#repo">Repository Structure</a></li>
+      <li><a href="#prompts">Claude Code Stage Prompts</a></li>
+      <li><a href="#next">Next Steps &amp; Handover Notes</a></li>
+      <li><a href="#selftest">Self-Healing Test Loop</a></li>
+    </ol>
+  </nav>
+
+  <!-- ══════════════════════════════════════ -->
+  <!-- PART 1 — PRODUCT                      -->
+  <!-- ══════════════════════════════════════ -->
+
+  <section id="product">
+    <div class="section-header">
+      <div class="section-icon icon-purple">📋</div>
+      <div>
+        <div class="section-num">SECTION 1</div>
+        <h2>Product Overview — AIS Project Tracker</h2>
+      </div>
+    </div>
+
+    <p>
+      The <strong>AIS Project Tracker</strong> is an internal project management application built for
+      engineering teams at AIS (Precision Engineering) to track both hardware and software
+      initiatives. It addresses a common pain point in engineering organisations: projects
+      that stagnate without visibility, accountability, or a clear audit trail of status changes.
+    </p>
+    <p>
+      The app is deployed as a <strong>Power Apps Code App</strong> — a React/TypeScript application
+      hosted inside Power Platform — giving it seamless integration with Dataverse for data storage
+      and Power Platform's authentication layer for access control.
+    </p>
+
+    <div class="grid-3" style="margin-top:1.25rem;">
+      <div class="card">
+        <div class="card-title">🎯 Problem Solved</div>
+        <p>Prevents project stagnancy by surfacing overdue milestones and stagnant statuses with visual alerts so managers can act immediately.</p>
+      </div>
+      <div class="card">
+        <div class="card-title">👥 Who Uses It</div>
+        <p>Project Managers, Developers, End Users, Ops Managers, and Product Owners across hardware and software engineering teams.</p>
+      </div>
+      <div class="card">
+        <div class="card-title">🏗️ Where It Lives</div>
+        <p>Deployed on Power Platform as a Code App backed by Dataverse tables. Authentication is managed by Power Platform.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════ -->
+  <!-- SECTION 2 — FEATURES                  -->
+  <!-- ══════════════════════════════════════ -->
+
+  <section id="features">
+    <div class="section-header">
+      <div class="section-icon icon-blue">✨</div>
+      <div>
+        <div class="section-num">SECTION 2</div>
+        <h2>Key Features &amp; User Scenarios</h2>
+      </div>
+    </div>
+
+    <h3>Kanban Dashboard</h3>
+    <p>
+      The primary interface is a four-column Kanban board. Projects are grouped by status and
+      each column is colour-coded to give instant visual clarity.
+    </p>
+    <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:1.25rem;">
+      <span class="pill pill-violet">● Ideation</span>
+      <span class="pill pill-amber">● In Progress</span>
+      <span class="pill pill-emerald">● Completed</span>
+      <span class="pill pill-slate">● De-Prioritised</span>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Drag &amp; Drop Status Changes</div>
+      <p>Cards can be dragged between columns. Dropping a card in a different column automatically updates the project's status in Dataverse and shows a confirmation toast. Drop zones highlight with a dashed border when a card is being dragged over them.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Project Cards</div>
+      <p>Each card shows the project name, type badge (<span class="pill pill-violet" style="font-size:0.7rem;">Hardware</span> or <span class="pill pill-sky" style="font-size:0.7rem;">Software</span>), a date-status left border (red = overdue, amber = due soon, emerald = on track), and action buttons for Edit, Expand, and View.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Project Detail Modal</div>
+      <p>Full-screen modal accessible from the "View" button. Displays progress bar, project team grouped by role, problem statement, proposed solution, expected benefits, estimated man-hours saved, timeline, milestones with completion status, and clickable media URL tags.</p>
+    </div>
+
+    <h3>Key User Scenarios</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Scenario</th>
+          <th>How it works</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Daily Standup Review</td>
+          <td>Manager opens dashboard, filters to "In Progress" projects, spots amber/red-highlighted stagnant items requiring follow-up</td>
+        </tr>
+        <tr>
+          <td>Project Creation</td>
+          <td>Owner clicks "+" in any column or the global create button; fills in the project form with name, problem statement, type, contributors, milestones, and media URLs</td>
+        </tr>
+        <tr>
+          <td>Status Update</td>
+          <td>Drag a card to a different column — system updates Dataverse and logs the change automatically</td>
+        </tr>
+        <tr>
+          <td>Escalation Discovery</td>
+          <td>Filter to stagnant projects, open detail modal to review full milestone history and last activity</td>
+        </tr>
+        <tr>
+          <td>Completion Tracking</td>
+          <td>Mark project as Completed; system records final date and displays total estimated man-hours saved in the KPI summary</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Filtering &amp; Sorting</h3>
+    <p>
+      The header bar provides filters by project type (Hardware / Software), sorting options
+      (by name, date, priority), and a light/dark theme toggle. An export dialog allows
+      downloading the project list as Excel or PDF.
+    </p>
+  </section>
+
+  <!-- ══════════════════════════════════════ -->
+  <!-- SECTION 3 — DATA MODEL                -->
+  <!-- ══════════════════════════════════════ -->
+
+  <section id="data">
+    <div class="section-header">
+      <div class="section-icon icon-teal">🗄️</div>
+      <div>
+        <div class="section-num">SECTION 3</div>
+        <h2>Data Model</h2>
+      </div>
+    </div>
+
+    <p>All data is stored in Dataverse. The application uses one primary table and one in-memory table for media URLs.</p>
+
+    <h3>AIS Project Tracker Table (<code>crd49_AISProjectTracker1</code>)</h3>
+    <table>
+      <thead>
+        <tr><th>Field</th><th>Type</th><th>Required</th><th>Description</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>crd49_ProjectName</code></td><td>String (850)</td><td>Yes</td><td>Display name of the project</td></tr>
+        <tr><td><code>crd49_ProblemStatement</code></td><td>Memo (2000)</td><td>No</td><td>Problem description</td></tr>
+        <tr><td><code>crd49_ProjectType</code></td><td>Picklist</td><td>Yes</td><td>Hardware or Software</td></tr>
+        <tr><td><code>crd49_ProposedSolution</code></td><td>Memo (2000)</td><td>No</td><td>Proposed approach</td></tr>
+        <tr><td><code>crd49_Status</code></td><td>Picklist</td><td>Yes</td><td>StatusKey0–3 (Ideation / In Progress / Completed / De-Prioritised)</td></tr>
+        <tr><td><code>crd49_ContributorsJSONData</code></td><td>Memo (2000)</td><td>No</td><td>JSON array of <code>{ name, role }</code> objects</td></tr>
+        <tr><td><code>crd49_MilestonesJSONData</code></td><td>Memo (2000)</td><td>No</td><td>JSON array of milestone objects</td></tr>
+        <tr><td><code>crd49_ExpectedBenefits</code></td><td>Memo (2000)</td><td>No</td><td>Anticipated outcomes</td></tr>
+        <tr><td><code>crd49_StartDate</code></td><td>DateTime</td><td>No</td><td>Project start date</td></tr>
+        <tr><td><code>crd49_DueDate</code></td><td>DateTime</td><td>No</td><td>Target completion date</td></tr>
+        <tr><td><code>crd49_EstManHoursSaved</code></td><td>Integer</td><td>No</td><td>Projected man-hours saved per year</td></tr>
+      </tbody>
+    </table>
+
+    <h3>JSON Sub-structures</h3>
+    <div class="grid-2">
+      <div>
+        <p style="font-size:0.8rem; color:#64748b; margin-bottom:0.4rem;">Contributors JSON</p>
+        <pre><code>[
+  { "name": "John Smith",
+    "role": "Project Manager" },
+  { "name": "Jane Doe",
+    "role": "Developer" }
+]</code></pre>
+      </div>
+      <div>
+        <p style="font-size:0.8rem; color:#64748b; margin-bottom:0.4rem;">Milestones JSON</p>
+        <pre><code>[
+  { "id": "uuid",
+    "title": "Phase 1",
+    "edd": "2026-07-01",
+    "description": "...",
+    "completed": false }
+]</code></pre>
+      </div>
+    </div>
+
+    <h3>Project Media URLs Table (<code>crd49_ProjectMediaURL</code>)</h3>
+    <p>An in-memory table per project storing an array of <code>{ url, label }</code> objects. URLs display as clickable tag buttons colour-coded by type (violet = Image, sky = Video, amber = Others).</p>
+  </section>
+
+  <!-- ══════════════════════════════════════ -->
+  <!-- SECTION 4 — TECH STACK                -->
+  <!-- ══════════════════════════════════════ -->
+
+  <section id="stack">
+    <div class="section-header">
+      <div class="section-icon icon-amber">🔧</div>
+      <div>
+        <div class="section-num">SECTION 4</div>
+        <h2>Tech Stack</h2>
+      </div>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-title">Frontend</div>
+        <div class="chips">
+          <span class="chip">React 19</span>
+          <span class="chip">TypeScript</span>
+          <span class="chip">Vite</span>
+          <span class="chip">Tailwind CSS v4</span>
+          <span class="chip">shadcn/ui</span>
+          <span class="chip">Radix UI</span>
+          <span class="chip">Lucide Icons</span>
+          <span class="chip">Motion (Framer)</span>
+          <span class="chip">React Router v7</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">Data &amp; State</div>
+        <div class="chips">
+          <span class="chip">TanStack Query v5</span>
+          <span class="chip">TanStack Table v8</span>
+          <span class="chip">React Hook Form</span>
+          <span class="chip">Jotai</span>
+          <span class="chip">Dataverse (Power Platform)</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">Platform</div>
+        <div class="chips">
+          <span class="chip">Power Apps Code Apps</span>
+          <span class="chip">@microsoft/power-apps SDK</span>
+          <span class="chip">pac CLI</span>
+          <span class="chip">Power Platform Connectors</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">Tooling</div>
+        <div class="chips">
+          <span class="chip">npm</span>
+          <span class="chip">ESLint</span>
+          <span class="chip">TypeScript strict</span>
+          <span class="chip">date-fns</span>
+          <span class="chip">fflate (zip/xlsx)</span>
+        </div>
+      </div>
+    </div>
+
+    <h3>Generated Code Pattern</h3>
+    <p>
+      The <code>src/generated/</code> directory contains auto-generated Power Platform connector hooks, models,
+      services, and validators for the Dataverse table. These are produced by Power Apps tooling and
+      <strong>should not be hand-edited</strong>. Custom business logic lives in <code>src/hooks/</code>,
+      <code>src/components/</code>, and <code>src/pages/</code>.
+    </p>
+  </section>
+
+  <!-- ══════════════════════════════════════ -->
+  <!-- PART 2 — POWERCODEX                   -->
+  <!-- ══════════════════════════════════════ -->
+
+  <section id="powercodex">
+    <div class="section-header">
+      <div class="section-icon icon-purple">⚡</div>
+      <div>
+        <div class="section-num">SECTION 5</div>
+        <h2>What is PowerCodex?</h2>
+      </div>
+    </div>
+
+    <p>
+      <strong>PowerCodex</strong> is an open-source CLI initializer for teams building
+      <strong>Power Apps Code Apps</strong>. It scaffolds a production-ready starter and wires up
+      a <em>spec-driven development</em> workflow using <strong>OpenSpec</strong> and
+      <strong>GitHub Copilot</strong> prompt files — so every idea moves from exploration to
+      reviewable requirements to implementation without losing decisions in chat history.
+    </p>
+
+    <div class="callout callout-tip">
+      <span class="callout-icon">💡</span>
+      <span>
+        <strong>Core philosophy:</strong> Keep intent close to the code. Every idea becomes a file
+        that can be reviewed, changed, implemented, verified, and archived. Decisions live in the
+        repository — not in a chat window.
+      </span>
+    </div>
+
+    <h3>Installing PowerCodex</h3>
+    <pre><code># Install globally
+npm install -g @voyager163/powercodex@latest
+
+# Create a new project
+powercodex my-app
+cd my-app
+code .
+
+# Or without a global install:
+npx @voyager163/powercodex my-app</code></pre>
+
+    <h3>What the CLI Creates</h3>
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-title">Application Scaffold</div>
+        <p>Vite + React 19 + TypeScript starter, Tailwind CSS, shadcn/ui, React Router, TanStack Query &amp; Table, Zustand, Lucide Icons — pre-configured for Power Platform.</p>
+      </div>
+      <div class="card">
+        <div class="card-title">OpenSpec Configuration</div>
+        <p>A pre-configured <code>openspec/config.yaml</code> tailored for Code Apps: Power Platform connectors, <code>pac</code> CLI deployment, and Dataverse data layer.</p>
+      </div>
+      <div class="card">
+        <div class="card-title">OPSX Prompt Files</div>
+        <p>11 GitHub Copilot prompt files under <code>.github/prompts/</code> covering the full development lifecycle: explore, propose, implement, verify, archive.</p>
+      </div>
+      <div class="card">
+        <div class="card-title">CI/CD Workflows</div>
+        <p>GitHub Actions for CodeQL, Dependency Review, quality checks, Semgrep OSS, npm audit, and OpenSSF Scorecard — all pre-wired.</p>
+      </div>
+    </div>
+
+    <h3>Prerequisites</h3>
+    <table>
+      <thead><tr><th>Tool</th><th>Minimum Version</th><th>Purpose</th></tr></thead>
+      <tbody>
+        <tr><td>Node.js</td><td>20.19.0+</td><td>Runtime for CLI and build tools</td></tr>
+        <tr><td>npm</td><td>any</td><td>Package management</td></tr>
+        <tr><td>git</td><td>any</td><td>Version control</td></tr>
+        <tr><td>Power Platform CLI (<code>pac</code>)</td><td>latest</td><td>Deploy Code Apps to Power Platform</td></tr>
+        <tr><td>VS Code + GitHub Copilot</td><td>latest</td><td>AI-assisted development with OPSX commands</td></tr>
+        <tr><td>OpenSpec</td><td>latest</td><td>Spec-driven artifact management (auto-installed if missing)</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ══════════════════════════════════════ -->
+  <!-- SECTION 6 — OPSX WORKFLOW             -->
+  <!-- ══════════════════════════════════════ -->
+
+  <section id="workflow">
+    <div class="section-header">
+      <div class="section-icon icon-blue">🔄</div>
+      <div>
+        <div class="section-num">SECTION 6</div>
+        <h2>PowerCodex OPSX Workflow (Reference — Not Integrated)</h2>
+      </div>
+    </div>
+
+    <div class="callout callout-warn">
+      <span class="callout-icon">⚠️</span>
+      <span>
+        <strong>Important:</strong> The OPSX commands described below are <strong>not integrated</strong>
+        into the AIS Project Tracker app. The prompt files live only inside the
+        <code>PowerCodex/</code> tool directory and were never copied into the tracker's
+        <code>.github/prompts/</code> folder. Attempting to use <code>/opsx:explore</code> or
+        any other OPSX command in VS Code Copilot against the tracker app will not work.
+        This section documents the workflow <em>as designed</em> for reference, in case a future
+        developer decides to integrate it.
+      </span>
+    </div>
+
+    <p>
+      The OPSX workflow is PowerCodex's intended development lifecycle. Instead of ad-hoc Copilot
+      chat sessions that lose context, every change would follow a structured path from idea to
+      archived spec. All commands are intended to run inside GitHub Copilot chat in VS Code,
+      provided the prompt files are present under <code>.github/prompts/</code> in the project.
+    </p>
+
+    <div class="flow" style="margin-bottom:1.5rem;">
+      <div class="flow-step">Explore</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">New / Propose</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">Continue / FF</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">Verify</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">Apply</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">Sync</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">Archive</div>
+    </div>
+
+    <table class="cmd-table">
+      <thead>
+        <tr><th>Command</th><th>Purpose</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>/opsx:explore &lt;idea&gt;</td>
+          <td>Think through an idea without implementing. Use for architecture exploration, problem framing, risks, and trade-offs.</td>
+        </tr>
+        <tr>
+          <td>/opsx:new &lt;change&gt;</td>
+          <td>Start a new change and inspect the first artifact instructions before drafting.</td>
+        </tr>
+        <tr>
+          <td>/opsx:continue &lt;change&gt;</td>
+          <td>Continue creating or updating artifacts for an active change.</td>
+        </tr>
+        <tr>
+          <td>/opsx:ff &lt;change&gt;</td>
+          <td>Fast-forward artifact creation until the change is ready for implementation.</td>
+        </tr>
+        <tr>
+          <td>/opsx:propose &lt;change&gt;</td>
+          <td>Create a proposal, design, specs, and tasks for a new change all in one pass.</td>
+        </tr>
+        <tr>
+          <td>/opsx:verify &lt;change&gt;</td>
+          <td>Check that change artifacts are complete and internally consistent before coding begins.</td>
+        </tr>
+        <tr>
+          <td>/opsx:apply &lt;change&gt;</td>
+          <td>Implement the tasks from an approved OpenSpec change. This is when code is actually written.</td>
+        </tr>
+        <tr>
+          <td>/opsx:sync &lt;change&gt;</td>
+          <td>Sync completed change artifacts back into the canonical specs.</td>
+        </tr>
+        <tr>
+          <td>/opsx:archive &lt;change&gt;</td>
+          <td>Archive a completed change and sync the final specs. Marks the change as done.</td>
+        </tr>
+        <tr>
+          <td>/opsx:bulk-archive</td>
+          <td>Archive multiple completed changes when the workspace has accumulated finished work.</td>
+        </tr>
+        <tr>
+          <td>/opsx:onboard</td>
+          <td>Inspect the project and generate onboarding context for the AI assistant.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>How to Integrate OPSX (If Desired in Future)</h3>
+    <p>To wire up the OPSX workflow into the tracker app, copy the prompt and skill files from
+    the <code>PowerCodex/</code> directory into the tracker:</p>
+    <pre><code># From the repo root
+cp -R PowerCodex/.github/prompts "AIS Project Management Tool/apps/tracker/.github/prompts"
+cp -R PowerCodex/.github/skills  "AIS Project Management Tool/apps/tracker/.github/skills"
+
+# Also initialise OpenSpec in the tracker
+cd "AIS Project Management Tool/apps/tracker"
+openspec init   # or: npm install -g @fission-ai/openspec@latest first</code></pre>
+    <p>Once the files are in place and OpenSpec is installed, the <code>/opsx:*</code> commands
+    will be available inside GitHub Copilot chat when VS Code is opened at the tracker's root.</p>
+  </section>
+
+  <!-- ══════════════════════════════════════ -->
+  <!-- SECTION 7 — HOW POWERCODEX BUILT THIS -->
+  <!-- ══════════════════════════════════════ -->
+
+  <section id="build-guide">
+    <div class="section-header">
+      <div class="section-icon icon-teal">🏗️</div>
+      <div>
+        <div class="section-num">SECTION 7</div>
+        <h2>How PowerCodex Was Used to Build This App</h2>
+      </div>
+    </div>
+
+    <p>
+      The AIS Project Tracker was built using the PowerCodex scaffold and workflow. Below is the
+      exact sequence of steps used, which also serves as a guide for any future developer
+      extending or rebuilding the app.
+    </p>
+
+    <!-- Step 1 -->
+    <h3>Step 1 — Scaffold the Project</h3>
+    <pre><code># Create the PowerCodex app scaffold
+npx @voyager163/powercodex ais-precision-engineering-tracker
+cd ais-precision-engineering-tracker
+code .</code></pre>
+    <p>
+      This created the Vite + React 19 + TypeScript starter, installed all dependencies,
+      initialised OpenSpec, and set up the <code>.github/prompts/</code> OPSX files ready
+      for GitHub Copilot.
+    </p>
+
+    <!-- Step 2 -->
+    <h3>Step 2 — Initialise the Power Platform Environment</h3>
+    <pre><code># Connect the Code App to your Power Platform environment
+pac code init --environment &lt;environmentId&gt; --displayName "AIS Project Tracker"</code></pre>
+    <p>
+      This registers the app with the target environment and generates the
+      <code>power.config.json</code> file that ties local development to the cloud environment.
+    </p>
+
+    <!-- Step 3 -->
+    <h3>Step 3 — Create the Dataverse Table</h3>
+    <p>
+      The <code>crd49_AISProjectTracker1</code> Dataverse table was created manually in the
+      Power Apps maker portal (make.powerapps.com) with the fields described in Section 3.
+      The <strong>PowerCodex lifecycle engine</strong> can also automate this via portal DOM
+      automation (see <code>tools/lifecycle/lib/maker-recipes.js</code>) for future tables.
+    </p>
+
+    <!-- Step 4 -->
+    <h3>Step 4 — Generate Typed Connector Hooks</h3>
+    <p>
+      After creating the Dataverse table, Power Apps tooling was used to generate typed
+      TypeScript hooks, models, services, and validators into <code>src/generated/</code>.
+      These provide fully typed <code>useAISProjectManagerList</code>,
+      <code>useCreateAISProjectManager</code>, and <code>useUpdateAISProjectManager</code>
+      hooks used throughout the app.
+    </p>
+
+    <!-- Step 5 -->
+    <h3>Step 5 — Build Features with Claude Code (Actual Method Used)</h3>
+    <div class="callout callout-warn">
+      <span class="callout-icon">⚠️</span>
+      <span>
+        The OPSX workflow (<code>/opsx:propose</code>, <code>/opsx:apply</code>, etc.) was
+        <strong>not used</strong> to build this app — the prompt files were never integrated into
+        the tracker project. Features were built directly using <strong>Claude Code</strong>
+        with the product spec in <code>docs/overview.md</code> as the reference document.
+      </span>
+    </div>
+    <p>
+      Features were implemented by describing requirements to Claude Code against the
+      <code>docs/overview.md</code> specification. The overview document served as the
+      authoritative source of truth for UI behaviour, data structure, colour logic, and
+      business rules — effectively replacing the role that OPSX artifacts would otherwise play.
+    </p>
+    <p>
+      For example, to build or modify the Kanban board a developer would open
+      <code>docs/overview.md</code>, confirm the desired behaviour is documented there, then
+      describe the change to Claude Code which would edit the relevant files directly
+      (<code>src/pages/index.tsx</code>, <code>src/components/kanban-card.tsx</code>, etc.).
+    </p>
+
+    <!-- Step 6 -->
+    <h3>Step 6 — Local Development Loop</h3>
+    <pre><code># Start the local dev server
+npm run dev
+
+# Type-check without building
+npm run typecheck
+
+# Lint
+npm run lint
+
+# Build for production
+npm run build</code></pre>
+
+    <!-- Step 7 -->
+    <h3>Step 7 — Deploy to Power Platform</h3>
+    <pre><code># Push the built app to Power Platform
+pac code push
+
+# Or for a specific environment:
+pac code push --environment &lt;environmentId&gt;</code></pre>
+
+    <div class="callout callout-warn">
+      <span class="callout-icon">⚠️</span>
+      <span>
+        <strong>Authentication:</strong> The app relies entirely on Power Platform's managed
+        authentication. Do <strong>not</strong> add a custom auth layer. Users authenticate
+        through their Power Platform / Microsoft Entra credentials automatically.
+      </span>
+    </div>
+
+    <!-- Step 8 -->
+    <h3>Step 8 — Using the PowerCodex Lifecycle Dashboard (Optional)</h3>
+    <p>
+      PowerCodex ships a zero-dependency lifecycle dashboard for monitoring autonomous build loops.
+      While the AIS Tracker was built primarily with the manual OPSX workflow above, the dashboard
+      can be used for more autonomous iterations:
+    </p>
+    <pre><code># Serve the lifecycle dashboard
+npm run lifecycle:serve          # Opens at http://localhost:4321
+
+# Import and analyse the existing codebase
+npm run lifecycle -- import --analyze
+
+# Derive user stories from the code
+npm run lifecycle -- stories
+
+# Run the autonomous loop (real mode)
+npm run lifecycle -- loop --real --app-url https://&lt;your-app-url&gt; --env &lt;environmentId&gt;</code></pre>
+
+    <h3>Development Guidelines to Follow</h3>
+    <div class="card">
+      <ul style="padding-left:1.25rem; color:#94a3b8; font-size:0.875rem; line-height:2;">
+        <li>Read <code>docs/overview.md</code> before making any changes — it is the authoritative product spec</li>
+        <li>Keep requirements updated in <code>docs/overview.md</code> when behaviour changes, so the spec stays accurate</li>
+        <li>Use Power Platform connectors for all runtime data access; do not add a custom backend</li>
+        <li>Never add a custom auth layer — Power Platform handles authentication</li>
+        <li>Keep TypeScript strict mode on; fix all type errors before deploying</li>
+        <li>Do not hand-edit files under <code>src/generated/</code> — regenerate them from Power Apps tooling after schema changes</li>
+        <li>Run <code>npm run build</code> and <code>npm run typecheck</code> before running <code>pac code push</code></li>
+        <li>UI changes must stay consistent with Vite + React + Tailwind + shadcn/ui conventions</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════ -->
+  <!-- SECTION 8 — REPOSITORY STRUCTURE      -->
+  <!-- ══════════════════════════════════════ -->
+
+  <section id="repo">
+    <div class="section-header">
+      <div class="section-icon icon-amber">📁</div>
+      <div>
+        <div class="section-num">SECTION 8</div>
+        <h2>Repository Structure</h2>
+      </div>
+    </div>
+
+    <pre><code>AIS_Project_Management_Tool/
+├── AIS Project Management Tool/          ← Main product
+│   ├── apps/
+│   │   └── tracker/                      ← The Power Apps Code App
+│   │       ├── src/
+│   │       │   ├── pages/                ← Route-level components
+│   │       │   │   ├── index.tsx         ← Kanban dashboard (main view)
+│   │       │   │   └── _layout.tsx       ← App shell / layout wrapper
+│   │       │   ├── components/           ← Reusable UI components
+│   │       │   │   ├── kanban-card.tsx
+│   │       │   │   ├── create-project-dialog.tsx
+│   │       │   │   ├── project-detail-modal.tsx
+│   │       │   │   ├── export-projects-dialog.tsx
+│   │       │   │   └── ui/               ← shadcn/ui components
+│   │       │   ├── generated/            ← AUTO-GENERATED — do not edit
+│   │       │   │   ├── hooks/            ← Dataverse connector hooks
+│   │       │   │   ├── models/           ← TypeScript models
+│   │       │   │   ├── services/         ← API service layer
+│   │       │   │   └── validators/       ← Zod validators
+│   │       │   ├── hooks/                ← Custom business-logic hooks
+│   │       │   ├── lib/                  ← Utilities (excel, pdf, utils)
+│   │       │   └── main.tsx              ← App entry point
+│   │       ├── power.config.json         ← Power Platform environment config
+│   │       └── package.json
+│   ├── data-model/                       ← Dataverse schema exports
+│   └── docs/
+│       └── overview.md                   ← Full feature specification
+│
+└── PowerCodex/                           ← PowerCodex tool &amp; workflow
+    ├── openspec/
+    │   ├── config.yaml                   ← OpenSpec configuration
+    │   ├── changes/                      ← Active change artifacts
+    │   └── archive/                      ← Archived completed changes
+    ├── tools/lifecycle/                  ← Lifecycle dashboard &amp; engines
+    ├── templates/                        ← Starter template source
+    ├── .github/prompts/                  ← OPSX Copilot prompt files
+    └── README.md                         ← PowerCodex full documentation</code></pre>
+  </section>
+
+  <!-- ══════════════════════════════════════ -->
+  <!-- SECTION 10 — CLAUDE CODE PROMPTS      -->
+  <!-- ══════════════════════════════════════ -->
+
+  <section id="prompts">
+    <div class="section-header">
+      <div class="section-icon icon-purple">🤖</div>
+      <div>
+        <div class="section-num">SECTION 9</div>
+        <h2>Claude Code Stage Prompts</h2>
+      </div>
+    </div>
+
+    <p>
+      Copy and paste these prompts directly into <strong>Claude Code</strong> (the CLI or IDE extension)
+      to activate each stage of the development workflow. Each prompt is self-contained — paste it as-is
+      and Claude will orient itself, read the right files, and execute the stage end-to-end.
+    </p>
+
+    <div class="callout callout-info">
+      <span class="callout-icon">ℹ️</span>
+      <span>
+        Run these prompts from inside the tracker directory:
+        <code>AIS Project Management Tool/apps/tracker/</code>.
+        Claude Code must have read/write access to the project files.
+      </span>
+    </div>
+
+    <!-- ── STAGE 1 ── -->
+    <h3>Stage 1 — Create the Dataverse Tables</h3>
+    <p>Use this when setting up the data model for the first time or adding new tables.</p>
+    <div style="background:#0f172a; border:1px solid #334155; border-left:3px solid #7c3aed; border-radius:10px; padding:1.25rem 1.5rem; margin-bottom:1.5rem;">
+      <div style="font-size:0.7rem; color:#7c3aed; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:0.75rem;">PROMPT — PASTE INTO CLAUDE CODE</div>
+      <pre style="margin:0; background:none; border:none; padding:0;"><code style="color:#e2e8f0; font-size:0.82rem;">Read docs/overview.md and src/generated/ to understand the current data model.
+Then walk me through creating the Dataverse table crd49_AISProjectTracker1
+in the Power Apps maker portal — list every field, its type, whether it is
+required, and the exact picklist values for Status and ProjectType.
+Format the output as a step-by-step checklist I can follow in the maker portal
+at make.powerapps.com.</code></pre>
+    </div>
+
+    <!-- ── STAGE 2 ── -->
+    <h3>Stage 2 — Generate Typed Connector Hooks</h3>
+    <p>Run this after creating or modifying the Dataverse table to regenerate the typed SDK layer.</p>
+    <div style="background:#0f172a; border:1px solid #334155; border-left:3px solid #2563eb; border-radius:10px; padding:1.25rem 1.5rem; margin-bottom:1.5rem;">
+      <div style="font-size:0.7rem; color:#2563eb; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:0.75rem;">PROMPT — PASTE INTO CLAUDE CODE</div>
+      <pre style="margin:0; background:none; border:none; padding:0;"><code style="color:#e2e8f0; font-size:0.82rem;">Read the files under src/generated/ and docs/overview.md.
+The Dataverse table schema has changed. Explain what pac CLI or Power Apps
+tooling command I need to run to regenerate the typed hooks, models, services,
+and validators under src/generated/. Then check the existing hooks in
+src/generated/hooks/ and tell me if any custom hooks in src/hooks/ will break
+due to the schema change, and what I need to update.</code></pre>
+    </div>
+
+    <!-- ── STAGE 3 ── -->
+    <h3>Stage 3 — Build a Feature Against the Spec</h3>
+    <p>The main development loop. Replace <code>[FEATURE NAME]</code> with what you want to build.</p>
+    <div style="background:#0f172a; border:1px solid #334155; border-left:3px solid #0d9488; border-radius:10px; padding:1.25rem 1.5rem; margin-bottom:1.5rem;">
+      <div style="font-size:0.7rem; color:#0d9488; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:0.75rem;">PROMPT — PASTE INTO CLAUDE CODE</div>
+      <pre style="margin:0; background:none; border:none; padding:0;"><code style="color:#e2e8f0; font-size:0.82rem;">Read docs/overview.md in full. Then implement [FEATURE NAME] exactly as
+described in the spec — do not add anything not documented there.
+Reference the existing components in src/components/ and hooks in src/hooks/
+before creating anything new. After writing the code, run npm run typecheck
+and fix all type errors before reporting done.</code></pre>
+    </div>
+
+    <!-- ── STAGE 4 ── -->
+    <h3>Stage 4 — Local Dev Server + Visual Verification</h3>
+    <p>Use this to start the app and verify the UI matches the spec before deploying.</p>
+    <div style="background:#0f172a; border:1px solid #334155; border-left:3px solid #d97706; border-radius:10px; padding:1.25rem 1.5rem; margin-bottom:1.5rem;">
+      <div style="font-size:0.7rem; color:#d97706; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:0.75rem;">PROMPT — PASTE INTO CLAUDE CODE</div>
+      <pre style="margin:0; background:none; border:none; padding:0;"><code style="color:#e2e8f0; font-size:0.82rem;">Start the local dev server with `npm run dev`, then open the app in the browser
+and verify these things from docs/overview.md:
+1. All four Kanban columns render (Ideation, In Progress, Completed, De-Prioritised)
+2. The colour-coded left border logic on cards (red/amber/emerald based on due date)
+3. Drag-and-drop moves a card and triggers a toast confirmation
+4. The project detail modal opens and shows all fields
+Report any visual discrepancies against the spec and fix them before stopping.</code></pre>
+    </div>
+
+    <!-- ── STAGE 5 ── -->
+    <h3>Stage 5 — Run Tests in the Live Production App (Loop Until Passing)</h3>
+    <p>Use this after <code>pac code push</code> to drive automated verification against the deployed app. Claude will loop and fix until every check passes.</p>
+    <div style="background:#0f172a; border:1px solid #334155; border-left:3px solid #7c3aed; border-radius:10px; padding:1.25rem 1.5rem; margin-bottom:1.5rem;">
+      <div style="font-size:0.7rem; color:#7c3aed; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:0.75rem;">PROMPT — PASTE INTO CLAUDE CODE</div>
+      <pre style="margin:0; background:none; border:none; padding:0;"><code style="color:#e2e8f0; font-size:0.82rem;">The app is deployed at [YOUR POWER APPS URL]. Read docs/overview.md for
+the full feature spec, then run through the following test scenarios against
+the live app and keep looping — fixing code, running `npm run build`,
+running `pac code push`, and re-testing — until every check passes:
+
+1. Create a new project (all required fields)
+2. Drag the card to "In Progress" — confirm the status updates in Dataverse
+3. Open the project detail modal — confirm all fields render correctly
+4. Export the project list as Excel — confirm the file downloads
+5. Filter by project type "Hardware" — confirm only hardware projects show
+6. Mark a milestone complete — confirm the progress bar updates
+
+Report the status of each check after each loop iteration.
+Do not stop until all five checks pass on the live deployed app.</code></pre>
+    </div>
+
+    <!-- ── STAGE 6 ── -->
+    <h3>Stage 6 — Full Build + Deploy</h3>
+    <p>Use this to run a clean build, type-check, lint, and push to Power Platform in one go.</p>
+    <div style="background:#0f172a; border:1px solid #334155; border-left:3px solid #2563eb; border-radius:10px; padding:1.25rem 1.5rem; margin-bottom:1.5rem;">
+      <div style="font-size:0.7rem; color:#2563eb; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:0.75rem;">PROMPT — PASTE INTO CLAUDE CODE</div>
+      <pre style="margin:0; background:none; border:none; padding:0;"><code style="color:#e2e8f0; font-size:0.82rem;">Run the full pre-deploy checklist in order and fix any failures before moving
+to the next step:
+1. `npm run typecheck` — fix all type errors
+2. `npm run lint` — fix all lint warnings/errors
+3. `npm run build` — ensure the production build succeeds with no warnings
+4. `pac code push` — deploy to the connected Power Platform environment
+Report the output of each step and confirm the deployment URL at the end.</code></pre>
+    </div>
+
+    <!-- ── STAGE 7 ── -->
+    <h3>Stage 7 — Fix a Bug (Describe → Locate → Fix → Verify Loop)</h3>
+    <p>Use this when something is broken. Replace the description with the actual bug.</p>
+    <div style="background:#0f172a; border:1px solid #334155; border-left:3px solid #0d9488; border-radius:10px; padding:1.25rem 1.5rem; margin-bottom:1.5rem;">
+      <div style="font-size:0.7rem; color:#0d9488; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:0.75rem;">PROMPT — PASTE INTO CLAUDE CODE</div>
+      <pre style="margin:0; background:none; border:none; padding:0;"><code style="color:#e2e8f0; font-size:0.82rem;">Bug: [DESCRIBE THE BUG — what you did, what you expected, what happened instead]
+
+Read docs/overview.md to understand the intended behaviour.
+Then search src/components/, src/pages/, and src/hooks/ to locate the root cause.
+Fix the bug, run `npm run typecheck` and `npm run build` to confirm no regressions,
+then start `npm run dev` and verify the fix in the browser before marking done.
+Do not change any behaviour that is not related to this bug.</code></pre>
+    </div>
+
+    <!-- ── STAGE 8 ── -->
+    <h3>Stage 8 — Update the Data Model + Regenerate</h3>
+    <p>Use when adding a new field to the Dataverse table and propagating the change through the app.</p>
+    <div style="background:#0f172a; border:1px solid #334155; border-left:3px solid #d97706; border-radius:10px; padding:1.25rem 1.5rem; margin-bottom:1.5rem;">
+      <div style="font-size:0.7rem; color:#d97706; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:0.75rem;">PROMPT — PASTE INTO CLAUDE CODE</div>
+      <pre style="margin:0; background:none; border:none; padding:0;"><code style="color:#e2e8f0; font-size:0.82rem;">I have added a new field [FIELD NAME] (type: [TYPE]) to the Dataverse table
+crd49_AISProjectTracker1 in the maker portal.
+
+Read src/generated/models/ and src/generated/hooks/ to understand the current
+generated types. Then:
+1. Tell me exactly what to re-run to regenerate src/generated/ after the schema change
+2. After regeneration, scan src/components/, src/pages/, and src/hooks/ for every
+   place that references the model and update them to include the new field
+3. Update docs/overview.md to document the new field
+4. Run `npm run typecheck` and confirm zero type errors before stopping.</code></pre>
+    </div>
+
+    <!-- ── STAGE 9 ── -->
+    <h3>Stage 9 — Onboard a New Developer</h3>
+    <p>Use this as the first prompt a new team member should run to get oriented.</p>
+    <div style="background:#0f172a; border:1px solid #334155; border-left:3px solid #7c3aed; border-radius:10px; padding:1.25rem 1.5rem; margin-bottom:1.5rem;">
+      <div style="font-size:0.7rem; color:#7c3aed; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:0.75rem;">PROMPT — PASTE INTO CLAUDE CODE</div>
+      <pre style="margin:0; background:none; border:none; padding:0;"><code style="color:#e2e8f0; font-size:0.82rem;">I am a new developer on this project. Read docs/overview.md, then read the
+repository structure under AIS Project Management Tool/apps/tracker/src/.
+Give me:
+1. A plain-English summary of what the app does and who uses it
+2. A map of which files I should touch for common changes
+   (e.g. "to change a card's appearance, edit src/components/kanban-card.tsx")
+3. The three commands I need to run to start developing locally
+4. The one command to deploy to production
+5. The two rules I must never break (auth and generated code)
+Keep the answer under 300 words.</code></pre>
+    </div>
+
+  </section>
+
+  <!-- ══════════════════════════════════════ -->
+  <!-- SECTION 10 — NEXT STEPS               -->
+  <!-- ══════════════════════════════════════ -->
+
+  <section id="next">
+    <div class="section-header">
+      <div class="section-icon icon-purple">🚀</div>
+      <div>
+        <div class="section-num">SECTION 10</div>
+        <h2>Next Steps &amp; Handover Notes</h2>
+      </div>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-title">🔧 To extend the app</div>
+        <p>Use <code>/opsx:propose &lt;feature-name&gt;</code> in GitHub Copilot inside VS Code. Follow the artifacts through to <code>/opsx:apply</code> and <code>/opsx:archive</code>. Never write code before the spec is verified.</p>
+      </div>
+      <div class="card">
+        <div class="card-title">🔑 To get access</div>
+        <p>Request access to the Power Platform environment. The app runs inside Power Platform so authentication flows through Microsoft Entra — no separate credentials needed.</p>
+      </div>
+      <div class="card">
+        <div class="card-title">📦 To deploy changes</div>
+        <p>Run <code>npm run build</code> to verify the build, then <code>pac code push</code> to deploy to the connected Power Platform environment.</p>
+      </div>
+      <div class="card">
+        <div class="card-title">🗄️ To update the data model</div>
+        <p>Changes to the Dataverse table must be made in the Power Apps maker portal. After schema changes, re-run Power Apps tooling to regenerate the <code>src/generated/</code> directory.</p>
+      </div>
+    </div>
+
+    <div class="callout callout-tip" style="margin-top:1.5rem;">
+      <span class="callout-icon">✅</span>
+      <span>
+        <strong>Quick-start for a new developer:</strong>
+        Clone the repo → <code>cd "AIS Project Management Tool/apps/tracker"</code> →
+        <code>npm install</code> → <code>npm run dev</code> → Read
+        <code>docs/overview.md</code> for the full product specification before making any changes.
+      </span>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════ -->
+  <!-- SECTION 10 — SELF-HEALING TEST LOOP   -->
+  <!-- ══════════════════════════════════════ -->
+
+  <section id="selftest">
+    <div class="section-header">
+      <div class="section-icon icon-teal">🔁</div>
+      <div>
+        <div class="section-num">SECTION 10</div>
+        <h2>Self-Healing Test Loop</h2>
+      </div>
+    </div>
+
+    <p>
+      The tracker ships a self-healing shell script that automatically runs all quality
+      checks and — if any fail — invokes <strong>Claude Code</strong> to fix the source files,
+      then re-runs the checks. The loop continues until everything is clean or a
+      configurable iteration cap is reached.
+    </p>
+
+    <div class="callout callout-info">
+      <span class="callout-icon">ℹ️</span>
+      <span>
+        <strong>File location:</strong>
+        <code>AIS Project Management Tool/apps/tracker/self-test-loop.sh</code>
+      </span>
+    </div>
+
+    <!-- How to run -->
+    <h3>Running the Loop</h3>
+    <pre><code>cd "AIS Project Management Tool/apps/tracker"
+
+# First time only — make it executable
+chmod +x self-test-loop.sh
+
+# Run the self-healing loop (default: up to 10 fix attempts)
+./self-test-loop.sh
+
+# Override the iteration cap
+MAX_ITERATIONS=5 ./self-test-loop.sh</code></pre>
+
+    <div class="callout callout-warn">
+      <span class="callout-icon">⚠️</span>
+      <span>
+        <strong>Prerequisite:</strong> Claude Code must be installed.
+        Run <code>npm install -g @anthropic-ai/claude-code</code> if the
+        <code>claude</code> command is not on your PATH. The script will
+        fall back to <code>npx @anthropic-ai/claude-code</code> automatically
+        if the global binary is absent.
+      </span>
+    </div>
+
+    <!-- What it checks -->
+    <h3>What the Loop Checks</h3>
+    <table>
+      <thead>
+        <tr><th>Check</th><th>Command</th><th>What it catches</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>TypeScript</strong></td>
+          <td><code>npm run typecheck</code></td>
+          <td>Type errors, missing imports, interface mismatches across all <code>.ts</code> / <code>.tsx</code> files</td>
+        </tr>
+        <tr>
+          <td><strong>ESLint</strong></td>
+          <td><code>npm run lint</code></td>
+          <td>Code style violations, unused variables, React hook rule violations</td>
+        </tr>
+        <tr>
+          <td><strong>Build</strong></td>
+          <td><code>npm run build</code></td>
+          <td>Vite bundler errors, unresolvable imports, dead code that TypeScript alone won't catch</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- How it fixes -->
+    <h3>How the Self-Heal Works</h3>
+    <p>
+      When any check fails, the script collects all error output into a single structured
+      prompt and calls Claude Code in <strong>non-interactive print mode</strong>
+      (<code>claude -p</code>). Claude is given permission to read and edit source files only
+      (<code>--allowedTools Read,Edit,Write</code>) — it cannot run shell commands or delete
+      files. After Claude finishes, the loop re-runs all three checks from scratch.
+    </p>
+
+    <div class="flow" style="margin-bottom:1.5rem;">
+      <div class="flow-step">Run checks</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">Collect errors</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">Claude fixes files</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">Re-run checks</div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">✅ Clean / repeat</div>
+    </div>
+
+    <!-- Rules passed to Claude -->
+    <h3>Rules Claude Follows When Fixing</h3>
+    <div class="card">
+      <ul style="padding-left:1.25rem; color:#94a3b8; font-size:0.875rem; line-height:2.1;">
+        <li>Edit only files under <code>src/</code> unless a config file (<code>tsconfig</code>, <code>vite.config</code>, <code>eslint</code>) is clearly at fault</li>
+        <li>Do not use <code>any</code> as a type shortcut — fix the actual type issue</li>
+        <li>Do not disable ESLint rules with inline comments — fix the underlying code</li>
+        <li>Do not run shell commands during the fix pass — the loop handles that</li>
+        <li>Fix all reported errors, not just the first one</li>
+      </ul>
+    </div>
+
+    <!-- Exit conditions -->
+    <h3>Exit Conditions</h3>
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-title" style="color:#34d399;">✅ Success (exit 0)</div>
+        <p>All three checks pass in the same iteration. Prints how many iterations were needed.</p>
+      </div>
+      <div class="card">
+        <div class="card-title" style="color:#f87171;">❌ Failure (exit 1)</div>
+        <p>Checks still fail after <code>MAX_ITERATIONS</code> attempts. Remaining errors are printed — manual intervention required.</p>
+      </div>
+    </div>
+
+    <!-- Example output -->
+    <h3>Example Terminal Output</h3>
+    <pre><code>╔══════════════════════════════════════════════╗
+║   AIS Tracker — Self-Healing Test Loop       ║
+╚══════════════════════════════════════════════╝
+  Max fix attempts : 10
+  Working directory: .../apps/tracker
+
+────────────────────────────────────────────
+Iteration 1 / 10
+────────────────────────────────────────────
+
+  typecheck  (tsc -b)...
+  ✗ typecheck failed
+  lint       (eslint)...
+  ✓ lint passed
+  build      (vite build)...
+  ✗ build failed
+
+⚠  Errors detected. Invoking Claude Code to fix...
+
+  [Claude edits src/components/kanban-card.tsx ...]
+
+  Claude finished. Re-running checks...
+
+────────────────────────────────────────────
+Iteration 2 / 10
+────────────────────────────────────────────
+
+  typecheck  (tsc -b)...
+  ✓ typecheck passed
+  lint       (eslint)...
+  ✓ lint passed
+  build      (vite build)...
+  ✓ build passed
+
+────────────────────────────────────────────
+✅  All checks passed after 2 iteration(s). App is healthy.
+────────────────────────────────────────────</code></pre>
+
+    <div class="callout callout-tip">
+      <span class="callout-icon">💡</span>
+      <span>
+        Run this script <strong>before every <code>pac code push</code></strong> to catch and
+        auto-fix any regressions introduced during development. It is safe to run as many times
+        as needed — Claude only edits source files and never touches Dataverse or Power Platform.
+      </span>
+    </div>
+  </section>
+
+</div>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <p>AIS Project Management Tool — Handover Document &nbsp;·&nbsp; Generated 22 June 2026</p>
+  <p style="margin-top:0.4rem; color:#334155;">Built with PowerCodex &amp; Power Apps Code Apps</p>
+</footer>
+
+</body>
+</html>
