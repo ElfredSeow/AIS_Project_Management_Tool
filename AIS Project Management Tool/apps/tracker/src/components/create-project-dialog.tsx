@@ -83,10 +83,10 @@ interface MediaUrlFormData {
   label: string;
 }
 const projectSchema = z.object({
-  name: z.string().min(1, { error: 'Project name is required' }),
-  problemStatement: z.string().min(10, { error: 'Problem statement must be at least 10 characters' }),
-  projectType: z.enum(['ASSET', 'DST'], { error: 'Select a solution type' }),
-  proposedSolution: z.string().min(1, { error: 'Proposed solution is required' }),
+  name: z.string().min(1, { message: 'Project name is required' }),
+  problemStatement: z.string().min(10, { message: 'Problem statement must be at least 10 characters' }),
+  projectType: z.enum(['ASSET', 'DST'], { message: 'Select a solution type' }),
+  proposedSolution: z.string().min(1, { message: 'Proposed solution is required' }),
   expectedBenefits: z.string().optional(),
   startDate: z.string().optional(),
   dueDate: z.string().optional(),

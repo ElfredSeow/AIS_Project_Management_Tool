@@ -13,12 +13,13 @@ import { KanbanCard } from '@/components/kanban-card';
 import { CreateProjectDialog } from '@/components/create-project-dialog';
 import { ProjectDetailModal } from '@/components/project-detail-modal';
 import { ExportProjectsDialog } from '@/components/export-projects-dialog';
+import { ImportProjectsDialog } from '@/components/import-projects-dialog';
 import { cn } from '@/lib/utils';
 import { toast } from 'sonner';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import { Checkbox } from '@/components/ui/checkbox';
-import { Plus, Layers, Cpu, HardDrive, ArrowUpDown, Filter, Sun, Moon, ChevronsUpDown, Download, FileText, FileDown } from 'lucide-react';
+import { Plus, Layers, Cpu, HardDrive, ArrowUpDown, Filter, Sun, Moon, ChevronsUpDown, Download, Upload, FileText, FileDown } from 'lucide-react';
 
 
 
@@ -86,6 +87,7 @@ export default function DashboardPage() {
   const [statusFilterOpen, setStatusFilterOpen] = useState(false);
   const { getPriority } = useProjectPriorities();
   const [exportProjectsDialogOpen, setExportProjectsDialogOpen] = useState(false);
+  const [importProjectsDialogOpen, setImportProjectsDialogOpen] = useState(false);
 
   // Refs for synchronized scrolling
   const topScrollRef = useRef<HTMLDivElement>(null);
@@ -294,12 +296,20 @@ export default function DashboardPage() {
         >
           <Button
             variant="outline"
+            onClick={() => setImportProjectsDialogOpen(true)}
+            className="gap-2"
+          >
+            <Upload className="w-4 h-4" />
+            Import Raw
+          </Button>
+          <Button
+            variant="outline"
             onClick={() => {
               if (!projects || projects.length === 0) {
                 toast.error('No projects to export');
                 return;
               }
-              
+
               // Export all columns from the table
               exportToExcel({
                 filename: `ais-projects-${format(new Date(), 'yyyy-MM-dd')}.xlsx`,
@@ -672,6 +682,13 @@ export default function DashboardPage() {
       <ExportProjectsDialog
         open={exportProjectsDialogOpen}
         onOpenChange={setExportProjectsDialogOpen}
+        projects={projects || []}
+      />
+
+      {/* Import Projects Dialog */}
+      <ImportProjectsDialog
+        open={importProjectsDialogOpen}
+        onOpenChange={setImportProjectsDialogOpen}
         projects={projects || []}
       />
 
